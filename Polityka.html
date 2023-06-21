@@ -1,0 +1,717 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+  <title>Polityka prywatności - Wicker-Maker</title>
+  <meta name="description" content="Polityka prywatności" />
+  <meta name="keywords" content="Polityka prywatności" />
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="canonical" href="https://www.Wicker-Maker.com/polityka-prywatnosci" />  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="facebook-domain-verification" content="xaaz0xp8qrnw2wwuaiw23zomqe7r4r" />
+  
+<meta name='dailymotion-domain-verification' content='dmpjxk5m4qlx6zx5v' />
+
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+<link rel="icon" href="77_white.png">
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="css/jquery.timepicker.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/MultiDeviceFullScreenScaling_2_0_2.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<meta name="google-site-verification" content="Nz8oZyBZEXO0VXdEWd4ltoAY56nR5nfPyXJ9dVPpJEY">
+<script type="text/javascript" id="www-widgetapi-script" src="https://www.youtube.com/s/player/73d31b49/www-widgetapi.vflset/www-widgetapi.js" async=""></script><script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+<meta property="og:type" content="website">
+	
+	  <!-- Open Graph --> 
+	  <meta property="og:locale" content="pl" />
+	  <meta property="og:type" content="website" />
+	  <meta property="og:site_name" content="Wicker-Maker.COM"/>
+	  <meta property="og:title" content="Polityka prywatności" />
+	  <meta property="og:description" content="Polityka prywatności" />
+	  <meta property="og:url" content="https://www.Wicker-Maker.com/polityka-prywatnosci" />
+	  <meta property="og:image" content="/images/og_image.png" />
+
+	  <!-- Twitter Card -->
+	  <meta name="twitter:card" content="summary" data-react-helmet="true" />
+	  <meta name="twitter:title" content="Polityka prywatności" data-react-helmet="true" />
+	  <meta name="twitter:description" content="Polityka prywatności" data-react-helmet="true" />
+	  <meta name="twitter:image" content="/images/og_image.png" data-react-helmet="true" />
+	  <meta name="twitter:site" content="@Wicker-Maker.COM" data-react-helmet="true">
+	  <meta name="twitter:creator" content="@Wicker-Maker.COM" data-react-helmet="true">
+	  
+	  
+
+	
+	
+<script>
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+$(document).ready(function() {
+	var tooltip = $("body").tooltip({ selector: '[data-bs-toggle=tooltip]' });
+});
+function addFavorite(id){
+	var temp_cookie = getCookie("favorite")?JSON.parse(getCookie("favorite")):[];
+	if (temp_cookie != "" && temp_cookie.indexOf(id) >= 0){
+		temp_cookie.splice(temp_cookie.indexOf(id),1);
+		setCookie('favorite',JSON.stringify(temp_cookie),365);
+		document.querySelectorAll('#favorite'+id).forEach(function(value) {
+			value.setAttribute("selected", "false");
+			var tooltip = bootstrap.Tooltip.getInstance(value);
+			if (tooltip){
+				tooltip.tip.querySelector('.tooltip-inner').innerHTML = 'Dodaj do obserwowanych';
+			}
+			if (value.hasAttribute("watched")) {
+				if (tooltip){
+					tooltip.dispose();
+				}
+				value.parentElement.remove();
+			}
+		});
+	} else {
+		temp_cookie.push(id);
+		setCookie('favorite',JSON.stringify(temp_cookie),365);
+		document.querySelectorAll('#favorite'+id).forEach(function(value) {
+			value.setAttribute("selected", "true");
+			var tooltip = bootstrap.Tooltip.getInstance(value);
+			if (tooltip){
+				tooltip.tip.querySelector('.tooltip-inner').innerHTML = 'Usuń z obserwowanych';
+			}
+		});
+	}	
+}
+</script>
+
+
+
+
+</head>
+<body>
+
+
+
+  
+<style>
+.LS_headerInfoBar{
+	height:20px;
+	line-height:20px;
+	color:var(--LS-color1);
+	background:var(--LS-color2);
+	width:100%;
+	text-align:center;
+	font-size:var(--LS-size2);
+	text-transform: uppercase;
+	letter-spacing: .1vw;
+	opacity: .75;
+}
+</style>
+<div class="LS_header" align="left" >
+	<span class="LS_headerInfoBar">Darmowa dostawa już od 300 PLN</span>	<label class="LS_burgerSwitch d-md-none d-inline-flex ">
+		<input type="checkbox" >
+		<span class="LS_burgerIcon">
+			<div class="LS_slideContainer" menu>
+				<a class="d-md-none d-block" href="strona_glowna.html">Strona główna</a>
+				<a class="d-md-none d-block" href="sklep.html">Koszyki zakupowe</a>
+				<a class="d-md-none d-block" href="sklep.html">Ozdoby na ogród</a>
+				<a class="d-md-none d-block" href="sklep.html">Meble wiklinowe</a>
+				<a class="d-md-none d-block" href="sklep.html">Kosze ozdobne</a>
+				<a class="d-md-none d-block" href="o-nas.html">O nas</a>
+			</div>
+		</span>
+	</label>
+	<div class="LS_menu">
+		<a class="LS_logo d-none d-sm-block" href="strona_glowna.html" icon=""><img src="77_white.png"></a>	
+			<a class="LS_logo d-sm-none d-block" href="strona_glowna.html" icon=""><img src="77_white.png"></a>
+	</div>
+	<div class="LS_menu d-none d-md-inline-flex">
+		<a class="d-none d-xl-block" href="strona_glowna.html" active="">Strona główna</a>	
+		<a class="d-none d-md-block" href="sklep.html">Kosze ozdobne</a>	
+		<a class="d-none d-lg-block" href="sklep.html">Kosze na ogród</a>	
+		<a class="d-none d-lg-block" href="sklep.html">Kosze zakupowe</a>	
+		<a class="d-none d-lg-block" href="sklep.html">Meble Wiklinowe</a>	
+		<a class="d-none d-md-block" href="o-nas.html">O nas</a>
+	</div>
+	<div class="LS_menu">
+		<div class="productSearchMenu d-none d-sm-flex">
+			<button type="click" onclick="setFocusInput(this)" class="LS_icon LS_search" icon="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Wyszukaj produkt" for="searchMenu"></button>
+			<section>
+				<input id="searchNameMenu" type="text" placeholder="Wyszukaj produkt" maxlength="240" autocomplete="off">
+				<div class="productsSearchList"></div>
+			</section>
+		</div>
+		<a class="LS_icon LS_favorite" href="obserwacje.html" icon="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Obserwowane"></a>
+		<a class="LS_icon LS_user" href="Logowanie.html" icon="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Logowanie"></a>	
+		<a href="Koszyk.html" class="LS_icon LS_shopping-cart" value="0" icon="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Koszyk"></a>
+		<a class="LS_icon LS_contact" href="Kontakt.html" icon="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Kontakt"></a>
+	</div>
+</div>
+    
+  
+<style>
+:root {
+	--LS-main: #2ee436;
+	--LS-mainAlpha: #2ee43626;
+	--LS-mainBG: #0a0a0a;
+	--LS-main1: #2ee436;
+	--LS-main2: #fff;
+	--LS-main3: #fff;
+	--LS-main4: #000;
+	--LS-main5: #0a0a0a;
+	--LS-color: #0a0a0a;
+	--LS-color1: #000;
+	--LS-color2: #fff;
+		
+	
+	--LS-color3: #eeefef;
+	--LS-color4: #b2b2b2;
+	--LS-color5: #fff;
+	--LS-color6: #ebebeb;
+	--LS-color7: #888;
+	--LS-color8: #f7f7f7;
+	--LS-color9: #000;
+	
+			--LS-HeadHeight: 88px;
+	}
+
+@media all and (max-width:575.99px){
+	:root {
+		--LS-size1:2vw;
+		--LS-size2:2.3vw;
+		--LS-size2_5:2.4vw;
+		--LS-size3:2.5vw;
+		--LS-size4:3vw;
+		--LS-size5:3.5vw;
+		--LS-size6:4vw;
+		--LS-size7:4.5vw;
+		--LS-size8:5vw;
+		--LS-size9:6vw;
+		--LS-size10:7vw;
+	}
+}
+@media all and (min-width:576px) and (max-width:767.99px){
+	:root {
+		--LS-size1:1.05vw;
+		--LS-size2:1.48vw;
+		--LS-size2_5:1.52vw;
+		--LS-size3:1.57vw;
+		--LS-size4:1.75vw;
+		--LS-size5:1.9vw;
+		--LS-size6:2.63vw;
+		--LS-size7:3.51vw;
+		--LS-size8:4.38vw;
+		--LS-size9:5.2vw;
+		--LS-size10:6vw;
+	}
+}
+@media all and (min-width:768px) and (max-width:991.99px){
+	:root {
+		--LS-size1:.78vw;
+		--LS-size2:1.1vw;
+		--LS-size2_5:1.13vw;
+		--LS-size3:1.17vw;
+		--LS-size4:1.3vw;
+		--LS-size5:1.56vw;
+		--LS-size6:1.95vw;
+		--LS-size7:2.6vw;
+		--LS-size8:3.25vw;
+		--LS-size9:3.9vw;
+		--LS-size10:4.5vw;
+	}
+}
+@media all and (min-width:992px) and (max-width:1199.99px){
+	:root {
+		--LS-size1:.6vw;
+		--LS-size2:.84vw;
+		--LS-size2_5:.96vw;
+		--LS-size3:1.08vw;
+		--LS-size4:1.2vw;
+		--LS-size5:1.44vw;
+		--LS-size6:1.8vw;
+		--LS-size7:2.4vw;
+		--LS-size8:3vw;
+		--LS-size9:3.6vw;
+		--LS-size10:4.2vw;
+	}
+}
+@media all and (min-width:1200px){
+	:root {
+		--LS-size1:.5vw;
+		--LS-size2:.7vw;
+		--LS-size2_5:.8vw;
+		--LS-size3:.9vw;
+		--LS-size4:1vw;
+		--LS-size5:1.2vw;
+		--LS-size6:1.5vw;
+		--LS-size7:2vw;
+		--LS-size8:2.5vw;
+		--LS-size9:3vw;
+		--LS-size10:3.5vw;
+	}
+}
+@font-face {
+  font-family: LS_fontLight;
+  src: url(/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: LS_font;
+  src: url(/fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: LS_fontBold;
+  src: url(/fonts/Montserrat-Black.ttf);
+}
+body{
+	background-color: var(--LS-color8);
+	color:#000;
+	cursor:default;
+	margin-right: 0 !important;
+	font-family: 'LS_font';
+	width:100vw;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	scroll-snap-type: y;
+	overflow-x: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.aos-init:not(.aos-animate):after{
+	position:fixed;
+}
+</style>
+
+
+ <script>
+			document.title = "Polityka prywatności - Wicker-Maker";
+ </script>
+
+ <div class="LS_pageTitle">
+	<div>Polityka prywatności</div>
+ </div>
+ 
+<div class="MDFSS_Container">
+	<p style="text-align:justify">SPIS TREŚCI:
+<br>POSTANOWIENIA OGÓLNE
+<br>PODSTAWY PRZETWARZANIA DANYCH
+<br>CEL, PODSTAWA, OKRES I ZAKRES PRZETWARZANIA DANYCH W SKLEPIE INTERNETOWYM
+<br>ODBIORCY DANYCH W SKLEPIE INTERNETOWYM
+<br>PROFILOWANIE W SKLEPIE INTERNETOWYM PRAWA OSOBY, KTÓREJ DANE DOTYCZĄ
+<br>COOKIES W SKLEPIE INTERNETOWYM, DANE EKSPLOATACYJNE I ANALITYKA
+<br>POSTANOWIENIA KOŃCOWE
+<br>
+<br>1. POSTANOWIENIA OGÓLNE
+<br>
+<br>1.1. Niniejsza polityka prywatności Serwisu Wicker-Maker.com ma charakter informacyjny, co oznacza że nie jest ona źródłem obowiązków dla Usługobiorców lub Klientów Sklepu Internetowego. Polityka prywatności zawiera przede wszystkim zasady dotyczące przetwarzania danych osobowych przez Administratora w Sklepie Internetowym, w tym podstawy, cele i zakres przetwarzania danych osobowych oraz prawa osób, których dane dotyczą, a także informacje w zakresie stosowania w Sklepie Internetowym plików cookies oraz narzędzi analitycznych.
+<br>
+<br>1.2. Administratorem danych osobowych zbieranych za pośrednictwem Serwisu jest Sergiusz Górski z siedzibą w Bielsku-Białej (adres siedziby i adres do korespondencji: ul. Nad Białą 5, 43-300 Bielsko-Biała); , NIP: 8992868779; adres poczty elektronicznej: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c4f5750594c7c0b51534e590b125f5351">[email&#160;protected]</a> - zwana dalej „Administratorem” i będąca jednocześnie Usługodawcą Serwisu Wicker-Maker.com i Sprzedawcą.
+<br>
+<br>1.3. Dane osobowe w Serwisie przetwarzane są przez Administratora zgodnie z obowiązującymi przepisami prawa, w szczególności zgodnie z rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych) - zwane dalej „RODO” lub „Rozporządzenie RODO”. Oficjalny tekst Rozporządzenia RODO: http://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A32016R0679
+<br>
+<br>1.4. Korzystanie ze Serwisu Wicker-Maker.com, w tym dokonywanie zakupów jest dobrowolne. Podobnie związane z tym podanie danych osobowych przez korzystającego ze Serwisu Usługobiorcę lub Klienta jest dobrowolne, z zastrzeżeniem dwóch wyjątków:
+<br>(1) zawieranie umów z Administratorem - niepodanie w przypadkach i w zakresie wskazanym na stronie Serwisu internetowego oraz w Regulaminie Serwisu internetowego i niniejszej polityce prywatności danych osobowych niezbędnych do zawarcia i wykonania Umowy Sprzedaży lub umowy o świadczenie Usługi Elektronicznej z Administratorem skutkuje brakiem możliwości zawarcia tejże umowy. Podanie danych osobowych jest w takim wypadku wymogiem umownym i jeżeli osoba, które dane dotyczą chce zawrzeć daną umowę z Administratorem, to jest zobowiązana do podania wymaganych danych. Każdorazowo zakres danych wymaganych do zawarcia umowy wskazany jest uprzednio na stronie Sklepu Internetowego oraz w Regulaminie Sklepu Internetowego;
+<br>(2) obowiązki ustawowe Administratora - podanie danych osobowych jest wymogiem ustawowym wynikającym z powszechnie obowiązujących przepisów prawa nakładających na Administratora obowiązek przetwarzania danych osobowych (np. przetwarzanie danych w celu prowadzenia ksiąg podatkowych lub rachunkowych) i brak ich podania uniemożliwi Administratorowi wykonanie tychże obowiązków.
+<br>
+<br>1.5. Administrator dokłada szczególnej staranności w celu ochrony interesów osób, których przetwarzane przez niego dane osobowe dotyczą, a w szczególności jest odpowiedzialny i zapewnia, że zbierane przez niego dane są:
+<br>(1) przetwarzane zgodnie z prawem;
+<br>(2) zbierane dla oznaczonych, zgodnych z prawem celów i niepoddawane dalszemu przetwarzaniu niezgodnemu z tymi celami;
+<br>(3) merytorycznie poprawne i adekwatne w stosunku do celów, w jakich są przetwarzane;
+<br>(4) przechowywane w postaci umożliwiającej identyfikację osób, których dotyczą, nie dłużej niż jest to niezbędne do osiągnięcia celu przetwarzania oraz
+<br>(5) przetwarzane w sposób zapewniający odpowiednie bezpieczeństwo danych osobowych, w tym ochronę przed niedozwolonym lub niezgodnym z prawem przetwarzaniem oraz przypadkową utratą, zniszczeniem lub uszkodzeniem, za pomocą odpowiednich środków technicznych lub organizacyjnych.
+<br>
+<br>1.6. Uwzględniając charakter, zakres, kontekst i cele przetwarzania oraz ryzyko naruszenia praw lub wolności osób fizycznych o różnym prawdopodobieństwie i wadze zagrożenia, Administrator wdraża odpowiednie środki techniczne i organizacyjne, aby przetwarzanie odbywało się zgodnie z niniejszym rozporządzeniem i aby móc to wykazać. Środki te są w razie potrzeby poddawane przeglądom i uaktualniane. Administrator stosuje środki techniczne zapobiegające pozyskiwaniu i modyfikowaniu przez osoby nieuprawnione, danych osobowych przesyłanych drogą elektroniczną.
+<br>
+<br>
+<br>2. PODSTAWY PRZETWARZANIA DANYCH
+<br>
+<br>2.1. Administrator uprawniony jest do przetwarzania danych osobowych w przypadkach, gdy – i w takim zakresie, w jakim – spełniony jest co najmniej jeden z poniższych warunków:
+<br>(1) osoba, której dane dotyczą wyraziła zgodę na przetwarzanie swoich danych osobowych w jednym lub większej liczbie określonych celów;
+<br>(2) przetwarzanie jest niezbędne do wykonania umowy, której stroną jest osoba, której dane dotyczą, lub do podjęcia działań na żądanie osoby, której dane dotyczą, przed zawarciem umowy;
+<br>(3) przetwarzanie jest niezbędne do wypełnienia obowiązku prawnego ciążącego na Administratorze; lub
+<br>(4) przetwarzanie jest niezbędne do celów wynikających z prawnie uzasadnionych interesów realizowanych przez Administratora lub przez stronę trzecią, z wyjątkiem sytuacji, w których nadrzędny charakter wobec tych interesów mają interesy lub podstawowe prawa i wolności osoby, której dane dotyczą, wymagające ochrony danych osobowych, w szczególności gdy osoba, której dane dotyczą, jest dzieckiem.
+<br>
+<br>2.2. Przetwarzanie danych osobowych przez Administratora wymaga każdorazowo zaistnienia co najmniej jednej z podstaw wskazanych w pkt. 2.1 polityki prywatności. Konkretne podstawy przetwarzania danych osobowych Usługobiorców i Klientów Serwisu Wicker-Maker.com przez Administratora są wskazane w kolejnym punkcie polityki prywatności – w odniesieniu do danego celu przetwarzania danych osobowych przez Administratora.
+<br>
+<br>
+<br>3. CEL, PODSTAWA, OKRES I ZAKRES PRZETWARZANIA DANYCH W SKLEPIE INTERNETOWYM
+<br>
+<br>3.1. Każdorazowo cel, podstawa, okres i zakres oraz odbiorcy danych osobowych przetwarzanych przez Administratora wynika z działań podejmowanych przez danego Usługobiorcę lub Klienta w Sklepie Internetowym. Przykładowo jeżeli Klient decyduje się na dokonanie zakupów w Sklepie Internetowym i wybierze odbiór osobisty zakupionego Produktu zamiast przesyłki kurierskiej, to jego dane osobowe będą przetwarzane w celu wykonania zawartej Umowy Sprzedaży, ale nie będą już udostępniane przewoźnikowi realizującemu przesyłki na zlecenie Administratora.
+<br>
+<br>3.2. Administrator może przetwarzać dane osobowe w Sklepie Internetowym w następujących celach, na następujących podstawach, w okresach oraz w następującym zakresie:
+<br>
+<br>3.2.1.1. Cel przetwarzania danych: Wykonanie Umowy Sprzedaży lub umowy o świadczenie Usługi Elektronicznej lub podjęcie działań na żądanie osoby, której dane dotyczą, przed zawarciem w/w umów
+<br>3.2.1.2. Podstawa prawna przetwarzania i okres przechowywania danych: Artykuł 6 ust. 1 lit. b) Rozporządzenia RODO (wykonanie umowy); Dane są przechowywane przez okres niezbędny do wykonania, rozwiązania lub wygaśnięcia w inny sposób zawartej umowy
+<br>3.2.1.3. Zakres przetwarzanych danych: Zakres maksymalny: imię i nazwisko; adres poczty elektronicznej; numer telefonu kontaktowego; adres dostawy (ulica, numer domu, numer lokalu, kod pocztowy, miejscowość, kraj), adres zamieszkania/prowadzenia działalności/siedziby (jeżeli jest inny niż adres dostawy). W wypadku Usługobiorców lub Klientów nie będących konsumentami Administrator może przetwarzać dodatkowo nazwę firmy oraz numer identyfikacji podatkowej (NIP) Usługobiorcy lub Klienta. Podany zakres jest maksymalny – w przypadku np. odbioru osobistego nie jest konieczne podanie adresu dostawy
+<br>
+<br>3.2.2.1. Cel przetwarzania danych: Przetwarzanie kont użytkowników w serwisie/sklepie internetowym www.Wicker-Maker.com
+<br>3.2.2.2. Podstawa prawna przetwarzania i okres przechowywania danych: art. 6 ust. 1 lit a RODO (zgoda osób, których dane dotyczą); Dane są przechowywane do czasu cofnięcia zgody lub 3 lata od ostatniego logowania użytkownika
+<br>3.2.2.3. Zakres przetwarzanych danych: Zakres maksymalny: imię i nazwisko; adres poczty elektronicznej; numer telefonu kontaktowego, w wypadku Usługobiorców lub Klientów nie będących konsumentami Administrator może przetwarzać dodatkowo nazwę firmy
+<br>
+<br>3.2.3.1. Cel przetwarzania danych: Działania marketingowe m.in. marketing bezpośredni
+<br>3.2.3.2. Podstawa prawna przetwarzania i okres przechowywania danych: Artykuł 6 ust. 1 lit. f) Rozporządzenia RODO (prawnie uzasadniony interes administratora)
+<br>Dane są przechowywane przez okres istnienia prawnie uzasadnionego interesu realizowanego przez Administratora, nie dłużej jednak niż przez okres przedawnienia roszczeń w stosunku do osoby, której dane dotyczą, z tytułu prowadzonej przez Administratora działalności gospodarczej. Okres przedawnienia określają przepisy prawa, w szczególności kodeksu cywilnego (podstawowy termin przedawnienia dla roszczeń związanych z prowadzeniem działalności gospodarczej wynosi trzy lata, a dla umowy sprzedaży dwa lata).
+<br>Administrator nie może przetwarzać danych w celu marketingu bezpośredniego w przypadku wyrażenia skutecznego sprzeciwu w tym zakresie przez osobę, której dane dotyczą.
+<br>3.2.3.3. Zakres przetwarzanych danych: nazwa firmy, imię i nazwisko, adres poczty elektronicznej; numer telefonu kontaktowego, adres przedsiębiorstwa
+<br>
+<br>3.2.4.1. Cel przetwarzania danych: Prowadzenie ksiąg rachunkowych
+<br>3.2.4.2. Podstawa prawna przetwarzania i okres przechowywania danych: Artykuł 6 ust. 1 lit. c) Rozporządzenia RODO w zw. z art. 74 ust. 2 ustawy o rachunkowości tj. z dnia 30 stycznia 2018 r. (Dz.U. z 2018 r. poz. 395)
+<br>3.2.4.3. Zakres przetwarzanych danych: Dane są przechowywane przez okres wymagany przepisami prawa nakazującymi Administratorowi przechowywanie ksiąg podatkowych (do czasu upływu okresu przedawnienia zobowiązania podatkowego, chyba że ustawy podatkowe stanowią inaczej) lub rachunkowych (5 lat, licząc od początku roku następującego po roku obrotowym, którego dane dotyczą). Imię i nazwisko; adres zamieszkania/prowadzenia działalności/siedziby (jeżeli jest inny niż adres dostawy), nazwa firmy oraz numer identyfikacji podatkowej (NIP) Usługobiorcy lub Klienta
+<br>
+<br>3.2.5.1. Cel przetwarzania danych: Ustalenie, dochodzenie lub obrona roszczeń jakie może podnosić Administrator lub jakie mogą być podnoszone wobec Administratora
+<br>3.2.5.2. Podstawa prawna przetwarzania i okres przechowywania danych: Artykuł 6 ust. 1 lit. f) Rozporządzenia RODO
+<br>3.2.5.3. Zakres przetwarzanych danych: Dane są przechowywane przez okres istnienia prawnie uzasadnionego interesu realizowanego przez Administratora, nie dłużej jednak niż przez okres przedawnienia roszczeń w stosunku do osoby, której dane dotyczą, z tytułu prowadzonej przez Administratora działalności gospodarczej. Okres przedawnienia określają przepisy prawa, w szczególności kodeksu cywilnego (podstawowy termin przedawnienia dla roszczeń związanych z prowadzeniem działalności gospodarczej wynosi trzy lata, a dla umowy sprzedaży dwa lata). Imię i nazwisko; numer telefonu kontaktowego; adres poczty elektronicznej; adres dostawy (ulica, numer domu, numer lokalu, kod pocztowy, miejscowość, kraj), adres zamieszkania/prowadzenia działalności/siedziby (jeżeli jest inny niż adres dostawy). W wypadku Usługobiorców lub Klientów nie będących konsumentami Administrator może przetwarzać dodatkowo nazwę firmy oraz numer identyfikacji podatkowej (NIP) Usługobiorcy lub Klienta.
+<br>
+<br>
+<br>4. ODBIORCY DANYCH W SKLEPIE INTERNETOWYM
+<br>
+<br>4.1. Dla prawidłowego funkcjonowania Sklepu Internetowego, w tym dla realizacji zawieranych Umów Sprzedaży konieczne jest korzystanie przez Administratora z usług podmiotów zewnętrznych (takich jak np. dostawca oprogramowania, kurier, czy podmiot obsługujący płatności). Administrator korzysta wyłącznie z usług takich podmiotów przetwarzających, którzy zapewniają wystarczające gwarancje wdrożenia odpowiednich środków technicznych i organizacyjnych, tak by przetwarzanie spełniało wymogi Rozporządzenia RODO i chroniło prawa osób, których dane dotyczą.
+<br>
+<br>4.2. Przekazanie danych przez Administratora nie następuje w każdym wypadku i nie do wszystkich wskazanych w polityce prywatności odbiorców lub kategorii odbiorców – Administrator przekazuje dane wyłącznie wtedy, gdy jest to niezbędne do realizacji danego celu przetwarzania danych osobowych i tylko w zakresie niezbędnym do jego zrealizowania. Przykładowo, jeżeli Klient korzysta z odbioru osobistego, to jego dane nie będą przekazywane przewoźnikowi współpracującemu z Administratorem.
+<br>
+<br>4.3. Dane osobowe Usługobiorców i Klientów Serwisu Wicker-Maker.com mogą być przekazywane następującym odbiorcom lub kategoriom odbiorców:
+<br>- przewoźnicy / spedytorzy / firmy kurierskie - w przypadku Klienta, który korzysta w Sklepie Internetowym ze sposobu dostawy Produktu przesyłką pocztową lub przesyłką kurierską, Administrator udostępnia zebrane dane osobowe Klienta wybranemu przewoźnikowi, spedytorowi lub pośrednikowi realizującemu przesyłki na zlecenie Administratora w zakresie niezbędnym do zrealizowania dostawy Produktu Klientowi.
+<br>
+<br>- podmioty obsługujące płatności elektroniczne lub kartą płatniczą - w przypadku Klienta, który korzysta w Sklepie Internetowym ze sposobu płatności elektronicznych lub kartą płatniczą Administrator udostępnia zebrane dane osobowe Klienta wybranemu podmiotowi obsługującemu powyższe płatności w Sklepie Internetowym na zlecenie Administratora w zakresie niezbędnym do obsługi płatności realizowanej przez Klienta.
+<br>
+<br>- dostawcy usług zaopatrujący Administratora w rozwiązania techniczne, informatyczne oraz organizacyjne, umożliwiające Administratorowi prowadzenie działalności gospodarczej, w tym Sklepu Internetowego i świadczonych za jego pośrednictwem Usług Elektronicznych (w szczególności dostawcy oprogramowania komputerowego do prowadzenia Sklepu Internetowego, dostawcy poczty elektronicznej i hostingu oraz dostawcy oprogramowania do zarządzania firmą i udzielania pomocy technicznej Administratorowi) - Administrator udostępnia zebrane dane osobowe Klienta wybranemu dostawcy działającemu na jego zlecenie jedynie w przypadku oraz w zakresie niezbędnym do zrealizowania danego celu przetwarzania danych zgodnego z niniejszą polityką prywatności.
+<br>
+<br>- dostawcy usług prawnych, doradczych i windykacyjnych zapewniający Administratorowi wsparcie prawne, doradcze lub windykacyjne (w szczególności kancelaria prawna lub firma windykacyjna) - Administrator udostępnia zebrane dane osobowe Klienta wybranemu dostawcy działającemu na jego zlecenie jedynie w przypadku oraz w zakresie niezbędnym do zrealizowania danego celu przetwarzania danych zgodnego z niniejszą polityką prywatności.
+<br>
+<br>5. PROFILOWANIE W SKLEPIE INTERNETOWYM
+<br>
+<br>5.1. Rozporządzenie RODO nakłada na Administratora obowiązek informowania o zautomatyzowanym podejmowaniu decyzji, w tym o profilowaniu, o którym mowa w art. 22 ust. 1 i 4 Rozporządzenia RODO, oraz – przynajmniej w tych przypadkach – istotne informacje o zasadach ich podejmowania, a także o znaczeniu i przewidywanych konsekwencjach takiego przetwarzania dla osoby, której dane dotyczą. Mając to na uwadze Administrator podaje w tym punkcie polityki prywatności informacje dotyczące możliwego profilowania.
+<br>
+<br>5.2. Administrator może korzystać w Sklepie Internetowym z profilowania do celów marketingu bezpośredniego, ale decyzje podejmowane na jego podstawie przez Administratora nie dotyczą zawarcia lub odmowy zawarcia Umowy Sprzedaży, czy też możliwości korzystania z Usług Elektronicznych w Serwisie Wicker-Maker.com. Efektem korzystania z profilowania w Serwisie Wicker-Maker.com może być np. przyznanie danej osobie rabatu, przesłanie jej kodu rabatowego, przypomnienie o niedokończonych zakupach, przesłanie propozycji Produktu, który może odpowiadać zainteresowaniom lub preferencjom danej osoby lub też zaproponowanie lepszych warunków w porównaniu do standardowej oferty Serwisu Wicker-Maker.com. Mimo profilowania to dana osoba podejmuje swobodnie decyzję, czy będzie chciała skorzystać z otrzymanego w ten sposób rabatu, czy też lepszych warunków i dokonać zakupu w Serwisie Wicker-Maker.com.
+<br>
+<br>5.3. Profilowanie w Serwisie Wicker-Maker.com polega na automatycznej analizie lub prognozie zachowania danej osoby na stronie Serwisu np. poprzez dodanie konkretnego Produktu do koszyka, przeglądanie strony konkretnego Produktu w Serwisie Wicker-Maker.com, czy też poprzez analizę dotychczasowej historii dokonanych zakupów w Serwisie. Warunkiem takiego profilowania jest posiadanie przez Administratora danych osobowych danej osoby, aby móc jej następnie przesłać np. kod rabatowy.
+<br>
+<br>5.4. Osoba, której dane dotyczą, ma prawo do tego, by nie podlegać decyzji, która opiera się wyłącznie na zautomatyzowanym przetwarzaniu, w tym profilowaniu, i wywołuje wobec tej osoby skutki prawne lub w podobny sposób istotnie na nią wpływa.
+<br>
+<br>
+<br>6. PRAWA OSOBY, KTÓREJ DANE DOTYCZĄ
+<br>
+<br>6.1. Prawo dostępu, sprostowania, ograniczenia, usunięcia lub przenoszenia - osoba, której dane dotyczą, ma prawo żądania od Administratora dostępu do swoich danych osobowych, ich sprostowania, usunięcia („prawo do bycia zapomnianym”) lub ograniczenia przetwarzania oraz ma prawo do wniesienia sprzeciwu wobec przetwarzania, a także ma prawo do przenoszenia swoich danych. Szczegółowe warunki wykonywania wskazanych wyżej praw wskazane są w art. 15-21 Rozporządzenia RODO.
+<br>
+<br>6.2. Prawo do cofnięcia zgody w dowolnym momencie – osoba, której dane przetwarzane są przez Administratora na podstawie wyrażonej zgody (na podstawie art. 6 ust. 1 lit. a) lub art. 9 ust. 2 lit. a) Rozporządzenia RODO), to ma ona prawo do cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem.
+<br>
+<br>6.3. Prawo wniesienia skargi do organu nadzorczego – osoba, której dane przetwarzane są przez Administratora, ma prawo wniesienia skargi do organu nadzorczego w sposób i trybie określonym w przepisach Rozporządzenia RODO oraz prawa polskiego, w szczególności ustawy o ochronie danych osobowych. Organem nadzorczym w Polsce jest Prezes Urzędu Ochrony Danych Osobowych.
+<br>
+<br>6.4. Prawo do sprzeciwu - osoba, której dane dotyczą, ma prawo w dowolnym momencie wnieść sprzeciw – z przyczyn związanych z jej szczególną sytuacją – wobec przetwarzania dotyczących jej danych osobowych opartego na art. 6 ust. 1 lit. e) (interes lub zadania publiczne) lub f) (prawnie uzasadniony interes administratora), w tym profilowania na podstawie tych przepisów. Administratorowi w takim przypadku nie wolno już przetwarzać tych danych osobowych, chyba że wykaże on istnienie ważnych prawnie uzasadnionych podstaw do przetwarzania, nadrzędnych wobec interesów, praw i wolności osoby, której dane dotyczą, lub podstaw do ustalenia, dochodzenia lub obrony roszczeń.
+<br>
+<br>6.5. Prawo do sprzeciwu dot. marketingu bezpośredniego - jeżeli dane osobowe są przetwarzane na potrzeby marketingu bezpośredniego, osoba, której dane dotyczą, ma prawo w dowolnym momencie wnieść sprzeciw wobec przetwarzania dotyczących jej danych osobowych na potrzeby takiego marketingu, w tym profilowania, w zakresie, w jakim przetwarzanie jest związane z takim marketingiem bezpośrednim.
+<br>
+<br>6.6. W celu realizacji uprawnień, o których mowa w niniejszym punkcie polityki prywatności można kontaktować się z Administratorem poprzez przesłanie stosownej wiadomości pisemnie lub pocztą elektroniczną na adres Administratora wskazany na wstępie polityki prywatności.
+<br>
+<br>
+<br>7. COOKIES W SKLEPIE INTERNETOWYM, DANE EKSPLOATACYJNE I ANALITYKA
+<br>
+<br>7.1. Pliki Cookies (ciasteczka) są to niewielkie informacje tekstowe w postaci plików tekstowych, wysyłane przez serwer i zapisywane po stronie osoby odwiedzającej stronę Serwisu Wicker-Maker.com (np. na dysku twardym komputera, laptopa, czy też na karcie pamięci smartfona – w zależności z jakiego urządzenia korzysta odwiedzający nasz Serwis). Szczegółowe informacje dot. plików Cookies, a także historię ich powstania można znaleźć m.in. tutaj: http://pl.wikipedia.org/wiki/Ciasteczko.
+<br>
+<br>7.2. Administrator może przetwarzać dane zawarte w plikach Cookies podczas korzystania przez odwiedzających ze strony Serwisu internetowego Wicker-Maker.com w następujących celach: identyfikacji Usługobiorców jako zalogowanych w Serwisie i pokazywania, że są zalogowani; zapamiętywania Produktów dodanych do koszyka w celu złożenia Zamówienia; zapamiętywania danych z wypełnianych Formularzy Zamówienia, ankiet lub danych logowania do Serwisu internetowego Wicker-Maker.com; dostosowywania zawartości strony Serwisu do indywidualnych preferencji Usługobiorcy (np. dotyczących kolorów, rozmiaru czcionki, układu strony) oraz optymalizacji korzystania ze stron Serwisu; prowadzenia anonimowych statystyk przedstawiających sposób korzystania ze strony Serwisu; remarketingu, to jest badania cech zachowania odwiedzających Sklep Internetowy poprzez anonimową analizę ich działań (np. powtarzające się wizyty na określonych stronach, słowa kluczowe itp.) w celu stworzenia ich profilu i dostarczenia im reklam dopasowanych do ich przewidywanych zainteresowań, także wtedy kiedy odwiedzają oni inne strony internetowe w sieci reklamowej firmy Google Inc.
+<br>
+<br>7.3. Standardowo większość przeglądarek internetowych dostępnych na rynku domyślnie akceptuje zapisywanie plików Cookies. Każdy ma możliwość określenia warunków korzystania z plików Cookies za pomocą ustawień własnej przeglądarki internetowej. Oznacza to, że można np. częściowo ograniczyć (np. czasowo) lub całkowicie wyłączyć możliwość zapisywania plików Cookies – w tym ostatnim wypadku jednak może to mieć wpływ na niektóre funkcjonalności Serwisu (przykładowo niemożliwym może okazać się przejście ścieżki Zamówienia poprzez Formularz Zamówienia z uwagi na niezapamiętywanie Produktów w koszyku podczas kolejnych kroków składania Zamówienia).
+<br>
+<br>7.4. Ustawienia przeglądarki internetowej w zakresie plików Cookies są istotne z punktu widzenia zgody na korzystanie z plików Cookies przez nasz Serwis internetowy – zgodnie z przepisami taka zgoda może być również wyrażona poprzez ustawienia przeglądarki internetowej. W braku wyrażenia takiej zgody należy odpowiednio zmienić ustawienia przeglądarki internetowej w zakresie plików Cookies.
+<br>
+<br>7.5. Szczegółowe informacje na temat zmiany ustawień dotyczących plików Cookies oraz ich samodzielnego usuwania w najpopularniejszych przeglądarkach internetowych dostępne są w dziale pomocy przeglądarki internetowej.
+<br>
+<br>7.6. Administrator może korzystać w Sklepie Internetowym z usług Google Analytics oraz Universal Analytics dostarczanych przez firmę Google Inc. (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA). Usługi te pomagają Administratorowi analizować ruch w Sklepie Internetowym. Gromadzone dane przetwarzane są w ramach powyższych usług w sposób zanonimizowany (są to tzw. dane eksploatacyjne, które uniemożliwiają identyfikację osoby) do generowania statystyk pomocnych w administrowaniu Serwisu. Dane te mają charakter zbiorczy i anonimowy, tj. nie zawierają cech identyfikujących (danych osobowych) osoby odwiedzające stronę Serwisu Wicker-Maker.com. Administrator korzystając z powyższych usług w Serwisie gromadzi takie dane jak źródła i medium pozyskania odwiedzających Sklep Internetowy oraz sposób ich zachowania na stronie Serwisu, informacje na temat urządzeń i przeglądarek z których odwiedzają stronę, IP oraz domenę, dane geograficzne oraz dane demograficzne (wiek, płeć) i zainteresowania.
+<br>
+<br>7.7. Możliwe jest zablokowanie w łatwy sposób przez daną osobę udostępniania Google Analytics informacji o jej aktywności na stronie Sklepu Internetowego - w tym celu można zainstalować dodatek do przeglądarki udostępniany przez firmę Google Inc. dostępny tutaj:https://tools.google.com/dlpage/gaoptout?hl=pl
+<br>
+<br>8. POSTANOWIENIA KOŃCOWE
+<br>
+<br>8.1. Serwis może zawierać odnośniki do innych stron internetowych. Administrator namawia by po przejściu na inne strony, zapoznać się z polityką prywatności tam ustaloną. Niniejsza polityka prywatności dotyczy tylko Serwisu Internetowego Administratora.
+<br>
+<br>8.2.W związku z ciągłym rozwojem usług i produktów Administratora oraz postępem technologicznym Administrator zastrzega sobie prawo do zmiany niniejszej Polityki celem zachowania jej aktualności. </p>		</div>
+<footer class="LS_footer">
+    <div class="MDFSS_Container">
+        <div class="MDFSS_Row">
+          <div class="MDFSS_Row MDFSS_Col-100-XS MDFSS_Col-100-S MDFSS_Col-25-M MDFSS_Col-25-L MDFSS_Col-25-XL LS_footerColumn" style="justify-content: center;align-content: center !important;">
+			<img src="77_white.png" class="d-md-none d-block" alt="" style="max-width:50%;max-height:100%;width:100%;margin-bottom: 3vw;" id="footerLogo">
+			<img src="77_white.png" class="d-none d-md-block" alt="" style="max-width:50%;max-height:100%;width:100%;" id="footerLogo">
+          </div>
+            <div class="MDFSS_Col-100-XS MDFSS_Col-33-S MDFSS_Col-25-M MDFSS_Col-25-L MDFSS_Col-25-XL LS_footerColumn">
+                <input type="checkbox" id="LS_footerColumn_1" hidden="">
+                <label for="LS_footerColumn_1" class="LS_footerTitle" data-icon="">Menu</label>
+                <a href="strona_glowna.html" class="LS_footerTitle">Strona główna</a>
+                <a href="obserwacje.html" class="LS_footerTitle">Obserwowane</a>
+                <a href="sklep.html" class="LS_footerTitle">Sklep</a>
+                <a href="Koszyk.html" class="LS_footerTitle">Koszyk</a>
+            </div>
+            <div class="MDFSS_Col-100-XS MDFSS_Col-33-S MDFSS_Col-25-M MDFSS_Col-25-L MDFSS_Col-25-XL LS_footerColumn">
+                <input type="checkbox" id="LS_footerColumn_2" hidden="">
+                <label for="LS_footerColumn_2" class="LS_footerTitle" data-icon="">INFORMACJE</label>
+                <a href="zwroty.html" class="LS_footerTitle">Zwroty</a>
+                <a href="Reklamacje.html" class="LS_footerTitle">Reklamacje</a>	
+                <a href="Platnosci.html" class="LS_footerTitle">Płatność i koszty dostawy</a>
+                
+                <a href="Regulamin.html" class="LS_footerTitle">Regulamin</a>
+                <a href="Polityka.html" class="LS_footerTitle">Polityka prywatności</a>
+            </div>
+            <div class="MDFSS_Col-100-XS MDFSS_Col-33-S MDFSS_Col-25-M MDFSS_Col-25-L MDFSS_Col-25-XL LS_footerColumn">
+                <input type="checkbox" id="LS_footerColumn_3" hidden="">
+                <label for="LS_footerColumn_3" class="LS_footerTitle" data-icon="">POMOC</label>
+                <a href="Kontakt.html" class="LS_footerTitle">Kontakt</a>
+                <a href="Logowanie.html" class="LS_footerTitle">Logowanie</a>
+            </div>
+            
+    </div>
+</footer>
+</section> 
+
+<style>
+.LS_footer label{
+	pointer-events: none;
+}
+@media all and (max-width:575.99px){
+	.LS_footer .MDFSS_Container{
+		width: 100%;
+	}
+	.LS_footer input[type="checkbox"]:not(:checked) ~ a{
+		visibility: hidden;
+		height: 0;
+		opacity:0 !important;
+		padding:unset !important;
+	}
+	.LS_footer label{
+		width: 100%;
+		margin-bottom: 0 !important;
+		cursor:pointer;
+		pointer-events: auto;
+		font-size: var(--LS-size7) !important;
+		padding:0 2vw;
+		display: flex;
+	}
+	.LS_footer input[type="checkbox"]:checked + label[data-icon]:before, .LS_footer input[type="checkbox"]:checked + label:after{
+		color:var(--LS-main);
+	}
+	.LS_footer label[data-icon]:before{
+		content: attr(data-icon);
+		font-family: "Font Awesome 5 Free";
+		font-weight: bold;
+		margin-right:1vw;
+	}
+	.LS_footer label:after{
+		content: '\f078';
+		font-family: "Font Awesome 5 Free";
+		font-weight: bold;
+		position: relative;
+		margin-left: auto;
+		vertical-align: middle;
+		transform-origin: center;
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-ms-transition: all 0.3s;
+		-o-transition: all 0.3s;
+	}
+	.LS_footer input[type="checkbox"]:checked + label:after{
+	  transform: rotate(180deg);
+	}
+	.LS_footer .LS_footerColumn:nth-of-type(n+3) label{
+		border-top:solid 1px var(--LS-color7);
+	}
+	.LS_footer a.LS_footerTitle {
+		font-size: var(--LS-size6) !important;
+		width: 100%;
+		padding:.8vw 2vw;
+		opacity:1;
+		transition: opacity .3s ease-in-out;
+	}
+	.LS_footer a.LS_footerTitle:after {
+		border-bottom: none;
+	}
+}
+</style>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6YK5P6R3L6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6YK5P6R3L6');
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11123493486"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11123493486');
+</script>
+
+	
+<script>
+	const closePopup = (element) =>{
+		element.removeAttribute('show');
+		element.removeEventListener("click", listenerClosePopup); 
+		$('body').css('overflow','auto');
+	}
+	const openPopup = (element) =>{
+		const target = document.querySelector('.LS_modalContainer#'+element);
+		target.setAttribute('show','');
+		$('body').css('overflow','hidden');
+		target.addEventListener("click", listenerClosePopup = (e) => {
+			if (e.target.classList.contains("LS_modalContainer")){
+				closePopup(e.target);
+			}
+		}, false); 
+	}
+	var loader = function() {
+		document.querySelectorAll('.LS_entryScreen').forEach(function(value, i) {
+			value.removeAttribute('active');
+			setTimeout(function(){value.remove()}, 400, value);
+		});
+	};
+	var globalTimeout = null;
+	function lookup(element,type) {
+		globalTimeout = null;
+		var temp = element.parentNode.lastElementChild;
+		if(element.value.length == 0) {
+		} else {
+			var dataString = 'value='+element.value+'&type='+type;
+			$.ajax
+			({
+				type: "POST",
+				url: '/php/ajax/ajax_search_name.php',
+				data: dataString,
+				cache: false,
+				dataType : 'json', 
+				success : function(result) {
+					if (element.matches(':focus')){
+						temp.setAttribute('active','');
+					}
+					if (type == 0){
+						element.nextElementSibling.querySelectorAll('a').forEach(function(value) {
+							var tooltip = bootstrap.Tooltip.getInstance(value);
+							if (tooltip){
+								tooltip.dispose();
+							}
+						});
+					}
+					temp.innerHTML = result.items;
+				},
+				complete(xhr, textStatus) {
+					return;
+				}                   
+			});
+		}
+	}
+	function acceptAllbox(element){
+		var status = element.checked;
+		document.querySelectorAll('.LS_acceptCheckbox').forEach(function(value, i) {
+			value.checked = status;
+		});
+	}
+	if (document.querySelector('.productSearch input')){
+		document.querySelector('.productSearch input').addEventListener('keyup', (event) => {
+			if(globalTimeout) {clearTimeout(globalTimeout)};
+			globalTimeout = setTimeout(lookup,(event.keyCode == 32 ? 0 : 1000),event.target,1);
+		});
+	}
+	if (document.querySelector('.productSearchMenu input')){
+		document.querySelector('.productSearchMenu input').addEventListener('keyup', (event) => {
+			if(globalTimeout) {clearTimeout(globalTimeout)};
+			globalTimeout = setTimeout(lookup,(event.keyCode == 32 ? 0 : 1000),event.target,0);
+		});
+		var searchStatus = false;
+		document.querySelector('.productSearchMenu .LS_search').addEventListener('mouseover', (event) => {
+			searchStatus = document.querySelector('#searchNameMenu') === document.activeElement ? true : false;
+		});
+		function setFocusInput(element){
+			var input = element.nextElementSibling.querySelector('input');
+			if (searchStatus){
+				input.blur();
+				searchStatus = false;
+			} else {
+				input.focus();
+				searchStatus = true;
+			}
+		}
+	}
+	var mobileWidth = 575;
+	$(document).ready(function(){
+	var quantitiy=0;
+	$('.quantity-right-plus').click(function(e){
+			
+			// Stop acting like a button
+			e.preventDefault();
+			// Get the field name
+			var quantity = parseInt($('#quantity').val());            
+				$('#quantity').val(quantity + 1).change(); 
+		});
+	
+		$('.quantity-left-minus').click(function(e){
+			// Stop acting like a button
+			e.preventDefault();
+			// Get the field name
+			var quantity = parseInt($('#quantity').val());
+	
+				// Increment
+				if(quantity>1){
+				$('#quantity').val(quantity - 1).change();
+				}
+		});
+		loader();
+	});
+	AOS.init();
+	let titleLoop;
+	const origTitle = document.title;
+	const newTitle = (x) => {
+		if (x){
+			titleLoop = setInterval(() => {document.title = document.title == origTitle ? '* Wróć na '+origTitle : origTitle}, 3000);
+		} else {
+			document.title = origTitle;
+			clearInterval(titleLoop);
+		}
+	}
+	window.onblur = () => newTitle(true);
+	window.onfocus = () => newTitle(false);
+</script>
+	
+  </body>
+</html>

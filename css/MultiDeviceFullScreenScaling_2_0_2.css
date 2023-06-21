@@ -1,0 +1,66 @@
+/*!
+ * Multi Device Full Screen Scaling v2.0.2
+ * Copyright 2022 by Åukasz Wieczorek Lansystem
+ * Licence: 7MORE7.COM 18/2022
+ */
+.MDFSS_Container{position:relative;width:90%;margin:0 auto;padding:.5vw 1vw}
+.MDFSS_Row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-preferred-size:0;flex-basis:0%;-ms-flex-positive:1;flex-grow:1;flex-shrink:0;flex-basis:60%;position:relative}{position:relative;flex-basis:100%;padding-right:1%;padding-left:1%;font-size:3vw;align-content:flex-start;min-width:0;}
+@media all and (min-width:300px)
+{.MDFSS_Row>[class^="MDFSS_Col-" i],
+    .MDFSS_Row>[class*=" MDFSS_Col-" i]{font-size:2.5vw}
+    .MDFSS_Col-5-XS{flex-basis:5%!important}
+    .MDFSS_Col-8-XS{flex-basis:8%!important}
+    .MDFSS_Col-10-XS{flex-basis:10%!important}
+    .MDFSS_Col-12_5-XS{flex-basis:12.5%!important}
+    .MDFSS_Col-15-XS{flex-basis:15%!important}
+    .MDFSS_Col-16-XS{flex-basis:calc(100%/6)!important}
+    .MDFSS_Col-20-XS{flex-basis:20%!important}
+    .MDFSS_Col-25-XS{flex-basis:25%!important}
+    .MDFSS_Col-30-XS{flex-basis:30%!important}
+    .MDFSS_Col-33-XS{flex-basis:calc(100%/3)!important}
+    .MDFSS_Col-35-XS{flex-basis:35%!important}
+    .MDFSS_Col-40-XS{flex-basis:40%!important}
+    .MDFSS_Col-45-XS{flex-basis:45%!important}
+    .MDFSS_Col-50-XS{flex-basis:50%!important}
+    .MDFSS_Col-55-XS{flex-basis:55%!important}
+    .MDFSS_Col-60-XS{flex-basis:60%!important}
+    .MDFSS_Col-65-XS{flex-basis:65%!important}
+    .MDFSS_Col-67-XS{flex-basis:calc(100%/3*2)!important}
+    .MDFSS_Col-70-XS{flex-basis:70%!important}
+    .MDFSS_Col-75-XS{flex-basis:75%!important}
+    .MDFSS_Col-80-XS{flex-basis:80%!important}
+    .MDFSS_Col-85-XS{flex-basis:85%!important}
+    .MDFSS_Col-90-XS{flex-basis:90%!important}
+    .MDFSS_Col-95-XS{flex-basis:95%!important}
+    .MDFSS_Col-100-XS{flex-basis:100%!important}
+    @media all and (min-width:576px){
+        .MDFSS_Row>[class^="MDFSS_Col-" i],
+        .MDFSS_Row>[class*=" MDFSS_Col-" i]{font-size:1.75vw}
+        .MDFSS_Col-5-S{flex-basis:5%!important}
+        .MDFSS_Col-8-S{flex-basis:8%!important}
+        .MDFSS_Col-10-S{flex-basis:10%!important}
+        .MDFSS_Col-12_5-S{flex-basis:12.5%!important}
+        .MDFSS_Col-15-S{flex-basis:15%!important}
+        .MDFSS_Col-16-S{flex-basis:calc(100%/6)!important}
+        .MDFSS_Col-20-S{flex-basis:20%!important}
+        .MDFSS_Col-25-S{flex-basis:25%!important}
+        .MDFSS_Col-30-S{flex-basis:30%!important}
+        .MDFSS_Col-33-S{flex-basis:calc(100%/3)!important}
+        .MDFSS_Col-35-S{flex-basis:35%!important}
+        .MDFSS_Col-40-S{flex-basis:40%!important}
+        .MDFSS_Col-45-S{flex-basis:45%!important}
+        .MDFSS_Col-50-S{flex-basis:50%!important}
+        .MDFSS_Col-55-S{flex-basis:55%!important}
+        .MDFSS_Col-60-S{flex-basis:60%!important}
+        .MDFSS_Col-65-S{flex-basis:65%!important}
+        .MDFSS_Col-67-S{flex-basis:calc(100%/3*2)!important}
+        .MDFSS_Col-70-S{flex-basis:70%!important}
+        .MDFSS_Col-75-S{flex-basis:75%!important}
+        .MDFSS_Col-80-S{flex-basis:80%!important}
+        .MDFSS_Col-85-S{flex-basis:85%!important}
+        .MDFSS_Col-90-S{flex-basis:90%!important}
+        .MDFSS_Col-95-S{flex-basis:95%!important}
+        .MDFSS_Col-100-S{flex-basis:100%!important}}
+        @media all and (min-width:768px){
+            .MDFSS_Row>[class^="MDFSS_Col-" i],
+            .MDFSS_Row>[class*=" MDFSS_Col-" i]{font-size:1.75vw}.MDFSS_Col-5-M{flex-basis:5%!important}.MDFSS_Col-8-M{flex-basis:8%!important}.MDFSS_Col-10-M{flex-basis:10%!important}.MDFSS_Col-12_5-M{flex-basis:12.5%!important}.MDFSS_Col-15-M{flex-basis:15%!important}.MDFSS_Col-16-M{flex-basis:calc(100%/6)!important}.MDFSS_Col-20-M{flex-basis:20%!important}.MDFSS_Col-25-M{flex-basis:25%!important}.MDFSS_Col-30-M{flex-basis:30%!important}.MDFSS_Col-33-M{flex-basis:calc(100%/3)!important}.MDFSS_Col-35-M{flex-basis:35%!important}.MDFSS_Col-40-M{flex-basis:40%!important}.MDFSS_Col-45-M{flex-basis:45%!important}.MDFSS_Col-50-M{flex-basis:50%!important}.MDFSS_Col-55-M{flex-basis:55%!important}.MDFSS_Col-60-M{flex-basis:60%!important}.MDFSS_Col-65-M{flex-basis:65%!important}.MDFSS_Col-67-M{flex-basis:calc(100%/3*2)!important}.MDFSS_Col-70-M{flex-basis:70%!important}.MDFSS_Col-75-M{flex-basis:75%!important}.MDFSS_Col-80-M{flex-basis:80%!important}.MDFSS_Col-85-M{flex-basis:85%!important}.MDFSS_Col-90-M{flex-basis:90%!important}.MDFSS_Col-95-M{flex-basis:95%!important}.MDFSS_Col-100-M{flex-basis:100%!important}}@media all and (min-width:992px){.MDFSS_Row>[class^="MDFSS_Col-" i],.MDFSS_Row>[class*=" MDFSS_Col-" i]{font-size:1.5vw}.MDFSS_Col-5-L{flex-basis:5%!important}.MDFSS_Col-8-L{flex-basis:8%!important}.MDFSS_Col-10-L{flex-basis:10%!important}.MDFSS_Col-12_5-L{flex-basis:12.5%!important}.MDFSS_Col-15-L{flex-basis:15%!important}.MDFSS_Col-16-L{flex-basis:calc(100%/6)!important}.MDFSS_Col-20-L{flex-basis:20%!important}.MDFSS_Col-25-L{flex-basis:25%!important}.MDFSS_Col-30-L{flex-basis:30%!important}.MDFSS_Col-33-L{flex-basis:calc(100%/3)!important}.MDFSS_Col-35-L{flex-basis:35%!important}.MDFSS_Col-40-L{flex-basis:40%!important}.MDFSS_Col-45-L{flex-basis:45%!important}.MDFSS_Col-50-L{flex-basis:50%!important}.MDFSS_Col-55-L{flex-basis:55%!important}.MDFSS_Col-60-L{flex-basis:60%!important}.MDFSS_Col-65-L{flex-basis:65%!important}.MDFSS_Col-67-L{flex-basis:calc(100%/3*2)!important}.MDFSS_Col-70-L{flex-basis:70%!important}.MDFSS_Col-75-L{flex-basis:75%!important}.MDFSS_Col-80-L{flex-basis:80%!important}.MDFSS_Col-85-L{flex-basis:85%!important}.MDFSS_Col-90-L{flex-basis:90%!important}.MDFSS_Col-95-L{flex-basis:95%!important}.MDFSS_Col-100-L{flex-basis:100%!important}}@media all and (min-width:1200px){.MDFSS_Row>[class^="MDFSS_Col-" i],.MDFSS_Row>[class*=" MDFSS_Col-" i]{font-size:1vw}.MDFSS_Col-5-XL{flex-basis:5%!important}.MDFSS_Col-8-XL{flex-basis:8%!important}.MDFSS_Col-10-XL{flex-basis:10%!important}.MDFSS_Col-12_5-XL{flex-basis:12.5%!important}.MDFSS_Col-15-XL{flex-basis:15%!important}.MDFSS_Col-16-XL{flex-basis:calc(100%/6)!important}.MDFSS_Col-20-XL{flex-basis:20%!important}.MDFSS_Col-25-XL{flex-basis:25%!important}.MDFSS_Col-30-XL{flex-basis:30%!important}.MDFSS_Col-33-XL{flex-basis:calc(100%/3)!important}.MDFSS_Col-35-XL{flex-basis:35%!important}.MDFSS_Col-40-XL{flex-basis:40%!important}.MDFSS_Col-45-XL{flex-basis:45%!important}.MDFSS_Col-50-XL{flex-basis:50%!important}.MDFSS_Col-55-XL{flex-basis:55%!important}.MDFSS_Col-60-XL{flex-basis:60%!important}.MDFSS_Col-65-XL{flex-basis:65%!important}.MDFSS_Col-67-XL{flex-basis:calc(100%/3*2)!important}.MDFSS_Col-70-XL{flex-basis:70%!important}.MDFSS_Col-75-XL{flex-basis:75%!important}.MDFSS_Col-80-XL{flex-basis:80%!important}.MDFSS_Col-85-XL{flex-basis:85%!important}.MDFSS_Col-90-XL{flex-basis:90%!important}.MDFSS_Col-95-XL{flex-basis:95%!important}.MDFSS_Col-100-XL{flex-basis:100%!important}}

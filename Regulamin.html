@@ -1,0 +1,729 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+  <title>Regulamin - Wicker-Maker</title>
+  <meta name="description" content="Regulamin" />
+  <meta name="keywords" content="Regulamin" />
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="canonical" href="https://www.Wicker-Maker.com/regulamin" />  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="facebook-domain-verification" content="xaaz0xp8qrnw2wwuaiw23zomqe7r4r" />
+  
+<meta name='dailymotion-domain-verification' content='dmpjxk5m4qlx6zx5v' />
+
+  
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+<link rel="icon" href="77_white.png">
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="css/jquery.timepicker.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/MultiDeviceFullScreenScaling_2_0_2.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<meta name="google-site-verification" content="Nz8oZyBZEXO0VXdEWd4ltoAY56nR5nfPyXJ9dVPpJEY">
+<script type="text/javascript" id="www-widgetapi-script" src="https://www.youtube.com/s/player/73d31b49/www-widgetapi.vflset/www-widgetapi.js" async=""></script><script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+<meta property="og:type" content="website">
+	
+	  <!-- Open Graph --> 
+	  <meta property="og:locale" content="pl" />
+	  <meta property="og:type" content="website" />
+	  <meta property="og:site_name" content="Wicker-Maker.COM"/>
+	  <meta property="og:title" content="Regulamin" />
+	  <meta property="og:description" content="Regulamin" />
+	  <meta property="og:url" content="https://www.Wicker-Maker.com/regulamin" />
+	  <meta property="og:image" content="" />
+
+	  <!-- Twitter Card -->
+	  <meta name="twitter:card" content="summary" data-react-helmet="true" />
+	  <meta name="twitter:title" content="Regulamin" data-react-helmet="true" />
+	  <meta name="twitter:description" content="Regulamin" data-react-helmet="true" />
+	  <meta name="twitter:image" content="/images/og_image.png" data-react-helmet="true" />
+	  <meta name="twitter:site" content="@Wicker-Maker.COM" data-react-helmet="true">
+	  <meta name="twitter:creator" content="@Wicker-Maker.COM" data-react-helmet="true">
+	  
+	  
+
+	
+	
+<script>
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+$(document).ready(function() {
+	var tooltip = $("body").tooltip({ selector: '[data-bs-toggle=tooltip]' });
+});
+function addFavorite(id){
+	var temp_cookie = getCookie("favorite")?JSON.parse(getCookie("favorite")):[];
+	if (temp_cookie != "" && temp_cookie.indexOf(id) >= 0){
+		temp_cookie.splice(temp_cookie.indexOf(id),1);
+		setCookie('favorite',JSON.stringify(temp_cookie),365);
+		document.querySelectorAll('#favorite'+id).forEach(function(value) {
+			value.setAttribute("selected", "false");
+			var tooltip = bootstrap.Tooltip.getInstance(value);
+			if (tooltip){
+				tooltip.tip.querySelector('.tooltip-inner').innerHTML = 'Dodaj do obserwowanych';
+			}
+			if (value.hasAttribute("watched")) {
+				if (tooltip){
+					tooltip.dispose();
+				}
+				value.parentElement.remove();
+			}
+		});
+	} else {
+		temp_cookie.push(id);
+		setCookie('favorite',JSON.stringify(temp_cookie),365);
+		document.querySelectorAll('#favorite'+id).forEach(function(value) {
+			value.setAttribute("selected", "true");
+			var tooltip = bootstrap.Tooltip.getInstance(value);
+			if (tooltip){
+				tooltip.tip.querySelector('.tooltip-inner').innerHTML = 'Usuń z obserwowanych';
+			}
+		});
+	}	
+}
+</script>
+
+
+
+
+</head>
+<body>
+
+
+
+  
+<style>
+.LS_headerInfoBar{
+	height:20px;
+	line-height:20px;
+	color:var(--LS-color1);
+	background:var(--LS-color2);
+	width:100%;
+	text-align:center;
+	font-size:var(--LS-size2);
+	text-transform: uppercase;
+	letter-spacing: .1vw;
+	opacity: .75;
+}
+</style>
+<div class="LS_header" align="left" >
+	<span class="LS_headerInfoBar">Darmowa dostawa już od 300 PLN</span>	<label class="LS_burgerSwitch d-md-none d-inline-flex ">
+		<input type="checkbox" >
+		<span class="LS_burgerIcon">
+			<div class="LS_slideContainer" menu>
+				<a class="d-md-none d-block" href="strona_glowna.html">Strona główna</a>
+				<a class="d-md-none d-block" href="sklep.html">Koszyki zakupowe</a>
+				<a class="d-md-none d-block" href="sklep.html">Ozdoby na ogród</a>
+				<a class="d-md-none d-block" href="sklep.html">Meble wiklinowe</a>
+				<a class="d-md-none d-block" href="sklep.html">Kosze ozdobne</a>
+				<a class="d-md-none d-block" href="o-nas.html">O nas</a>
+			</div>
+		</span>
+	</label>
+	<div class="LS_menu">
+		<a class="LS_logo d-none d-sm-block" href="strona_glowna.html" icon=""><img src="77_white.png"></a>	
+			<a class="LS_logo d-sm-none d-block" href="strona_glowna.html" icon=""><img src="77_white.png"></a>
+	</div>
+	<div class="LS_menu d-none d-md-inline-flex">
+		<a class="d-none d-xl-block" href="strona_glowna.html" active="">Strona główna</a>	
+		<a class="d-none d-md-block" href="sklep.html">Kosze ozdobne</a>	
+		<a class="d-none d-lg-block" href="sklep.html">Kosze na ogród</a>	
+		<a class="d-none d-lg-block" href="sklep.html">Kosze zakupowe</a>	
+		<a class="d-none d-lg-block" href="sklep.html">Meble Wiklinowe</a>	
+		<a class="d-none d-md-block" href="o-nas.html">O nas</a>
+	</div>
+	<div class="LS_menu">
+		<div class="productSearchMenu d-none d-sm-flex">
+			<button type="click" onclick="setFocusInput(this)" class="LS_icon LS_search" icon="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Wyszukaj produkt" for="searchMenu"></button>
+			<section>
+				<input id="searchNameMenu" type="text" placeholder="Wyszukaj produkt" maxlength="240" autocomplete="off">
+				<div class="productsSearchList"></div>
+			</section>
+		</div>
+		<a class="LS_icon LS_favorite" href="obserwacje.html" icon="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Obserwowane"></a>
+		<a class="LS_icon LS_user" href="Logowanie.html" icon="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Logowanie"></a>	
+		<a href="Koszyk.html" class="LS_icon LS_shopping-cart" value="0" icon="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Koszyk"></a>
+		<a class="LS_icon LS_contact" href="Kontakt.html" icon="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Kontakt"></a>
+	</div>
+</div>
+    
+  
+  
+<style>
+:root {
+	--LS-main: #2ee436;
+	--LS-mainAlpha: #2ee43626;
+	--LS-mainBG: #0a0a0a;
+	--LS-main1: #2ee436;
+	--LS-main2: #fff;
+	--LS-main3: #fff;
+	--LS-main4: #000;
+	--LS-main5: #0a0a0a;
+	--LS-color: #0a0a0a;
+	--LS-color1: #000;
+	--LS-color2: #fff;
+		
+	
+	--LS-color3: #eeefef;
+	--LS-color4: #b2b2b2;
+	--LS-color5: #fff;
+	--LS-color6: #ebebeb;
+	--LS-color7: #888;
+	--LS-color8: #f7f7f7;
+	--LS-color9: #000;
+	
+			--LS-HeadHeight: 88px;
+	}
+
+@media all and (max-width:575.99px){
+	:root {
+		--LS-size1:2vw;
+		--LS-size2:2.3vw;
+		--LS-size2_5:2.4vw;
+		--LS-size3:2.5vw;
+		--LS-size4:3vw;
+		--LS-size5:3.5vw;
+		--LS-size6:4vw;
+		--LS-size7:4.5vw;
+		--LS-size8:5vw;
+		--LS-size9:6vw;
+		--LS-size10:7vw;
+	}
+}
+@media all and (min-width:576px) and (max-width:767.99px){
+	:root {
+		--LS-size1:1.05vw;
+		--LS-size2:1.48vw;
+		--LS-size2_5:1.52vw;
+		--LS-size3:1.57vw;
+		--LS-size4:1.75vw;
+		--LS-size5:1.9vw;
+		--LS-size6:2.63vw;
+		--LS-size7:3.51vw;
+		--LS-size8:4.38vw;
+		--LS-size9:5.2vw;
+		--LS-size10:6vw;
+	}
+}
+@media all and (min-width:768px) and (max-width:991.99px){
+	:root {
+		--LS-size1:.78vw;
+		--LS-size2:1.1vw;
+		--LS-size2_5:1.13vw;
+		--LS-size3:1.17vw;
+		--LS-size4:1.3vw;
+		--LS-size5:1.56vw;
+		--LS-size6:1.95vw;
+		--LS-size7:2.6vw;
+		--LS-size8:3.25vw;
+		--LS-size9:3.9vw;
+		--LS-size10:4.5vw;
+	}
+}
+@media all and (min-width:992px) and (max-width:1199.99px){
+	:root {
+		--LS-size1:.6vw;
+		--LS-size2:.84vw;
+		--LS-size2_5:.96vw;
+		--LS-size3:1.08vw;
+		--LS-size4:1.2vw;
+		--LS-size5:1.44vw;
+		--LS-size6:1.8vw;
+		--LS-size7:2.4vw;
+		--LS-size8:3vw;
+		--LS-size9:3.6vw;
+		--LS-size10:4.2vw;
+	}
+}
+@media all and (min-width:1200px){
+	:root {
+		--LS-size1:.5vw;
+		--LS-size2:.7vw;
+		--LS-size2_5:.8vw;
+		--LS-size3:.9vw;
+		--LS-size4:1vw;
+		--LS-size5:1.2vw;
+		--LS-size6:1.5vw;
+		--LS-size7:2vw;
+		--LS-size8:2.5vw;
+		--LS-size9:3vw;
+		--LS-size10:3.5vw;
+	}
+}
+@font-face {
+  font-family: LS_fontLight;
+  src: url(/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: LS_font;
+  src: url(/fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: LS_fontBold;
+  src: url(/fonts/Montserrat-Black.ttf);
+}
+body{
+	background-color: var(--LS-color8);
+	color:#000;
+	cursor:default;
+	margin-right: 0 !important;
+	font-family: 'LS_font';
+	width:100vw;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	scroll-snap-type: y;
+	overflow-x: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.aos-init:not(.aos-animate):after{
+	position:fixed;
+}
+</style>
+
+
+ <script>
+			document.title = "Regulamin - Wicker-Maker";
+ </script>
+
+ <div class="LS_pageTitle">
+	<div>Regulamin</div>
+ </div>
+ 
+<div class="MDFSS_Container">
+
+
+	<p style="text-align:justify">I. Postanowienia ogólne i definicje
+<br>1. Niniejszy regulamin określa zasady korzystania ze sklepu internetowego Wicker-Maker.com.
+<br>2. Użyte w niniejszym regulaminie określenia oznaczają:
+<br>Sprzedawca - Sergiusz Górski z siedzibą przy ul. Nad Białą 5, 43-300 Bielsko-Biała, zarejestrowany w Centralnej Ewidencji i Informacji o Działalności Gospodarczej, NIP 8992868779, REGON 384442134, numer telefonu do Biura Obsługi Klienta sklepu internetowego Wicker-Maker.com: +48 33 444 65 41 (opłaty zgodnie z taryfą operatora), adres poczty elektronicznej <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dfacb4b3baaf9fe8b2b0adbae8f1bcb0b2">[email&#160;protected]</a>, www.Wicker-Maker.com
+<br>Sklep - sklep internetowy Wicker-Maker dostępny pod adresem https://www.Wicker-Maker.com prowadzony przez Sprzedawcę będący platformą sprzedażową, za pośrednictwem której Sprzedawca udostępnia funkcjonalności Sklepu oraz świadczy na rzecz Użytkowników usługi oraz umożliwia zawieranie umów sprzedaży Towarów na odległość, jak również za pośrednictwem której Użytkownicy mają możliwość zapoznania się z Towarami oferowanymi w Sklepie. Sprzedawca za pośrednictwem Sklepu udostępnia odpowiednie narzędzia systemowe, teleinformatyczne, technologiczne w celu świadczenia ww. usług.
+<br>Klient - Użytkownik, który zawarł umowę sprzedaży ze Sprzedawcą.
+<br>Konsument – Użytkownik będący osobą fizyczną dokonującą z przedsiębiorcą czynności prawnej niezwiązanej bezpośrednio z jej działalnością gospodarczą lub zawodową.
+<br>Konto Użytkownika - indywidualny panel Użytkownika, uruchomiony na jego rzecz przez Sprzedawcę (po dokonaniu przez Użytkownika rejestracji i zawarciu tym samym umowy 
+<br>o świadczenie usługi prowadzenia Konta Użytkownika), na którym są gromadzone dane Użytkownika podane przy rejestracji Konta Użytkownika, jak też historia składanych przez Użytkownika zamówień; założenie Konta Użytkownika jest dobrowolne i nie jest konieczne do korzystania ze Sklepu.
+<br>Regulamin – niniejszy regulamin określający zasady korzystania ze Sklepu, w tym składania zamówień na produkty dostępne w Sklepie, zawierania za pośrednictwem Sklepu umów sprzedaży na odległość, dostarczania zamówionych produktów Klientowi, uprawnienia Klienta do odstąpienia od umowy oraz zasady postępowania reklamacyjnego
+<br>Towary - znajdujące się w asortymencie Sklepu rzeczy ruchome mogące być przedmiotem umowy sprzedaży.
+<br>Umowa sprzedaży - umowa sprzedaży Towarów zawarta pomiędzy Użytkownikiem a Sprzedawcą za pośrednictwem Wicker-Maker na zasadach określonych w Regulaminie.
+<br>Newsletter - udostępniana przez Sprzedawcę usługa polegająca na przesyłaniu informacji handlowej w szczególności dotyczącej oferty produktów i świadczonych usług w formie wiadomości (maili) za pośrednictwem poczty elektronicznej na podany przez Użytkownika adres poczty elektronicznej.
+<br>Użytkownik – osoba fizyczna, osoba prawna lub jednostka organizacyjna nieposiadająca osobowości prawnej, która korzysta z funkcjonalności Sklepu.
+<br>3. Na podstawie Regulaminu Sprzedawca prowadzi sprzedaż detaliczną Towarów za pośrednictwem Internetu.
+<br>4. Do korzystania ze Sklepu, w tym składania zamówień na produkty oraz przeglądania asortymentu niezbędny jest: 
+<br>- komputer lub inne urządzenie z dostępem do sieci Internet,
+<br>- przeglądarką internetową typu Internet Explorer, Google Chrome, Mozilla Firefox, Opera, Safari, 
+<br>- aktywne konto poczty elektronicznej.
+<br>
+<br>II. Przedmiot oraz cena sprzedaży
+<br>1. Przedmiotem sprzedaży jest odzież oraz inny asortyment, przedstawiony na Sklepie. Prezentowane zdjęcia produktów są poglądowe i mogą nie odzwierciedlać w pełni rzeczywistej kolorystyki wyrobów. Rozmiary prezentowanych kolekcji mogą się wzajemnie różnić. Tabela rozmiarów dla danego produktu jest zamieszczona na Sklepie na podstronie dotyczącej danego produktu.
+<br>2. Podane na Sklepie ceny są cenami w złotych polskich i są cenami brutto 
+<br>tj. uwzględniającymi podatki, w tym podatek od towarów i usług (VAT) w obowiązującej wysokości. Do ceny tej należy doliczyć koszty dostawy, które uzależnione są od wybranej formy dostawy. Szczegółowe koszty dostawy wskazane są na Sklepie w zakładce Płatności 
+<br>i Koszty dostawy.
+<br>3. Ostateczna kwota do zapłaty stanowi sumę ceny Towarów oraz kosztów dostawy. Po dokonaniu zamówienia i jego opłaceniu cena ta nie ulegnie zmianie. O ostatecznej kwocie do zapłaty Użytkownik jest informowany w trakcie składania zamówienia, w tym także bezpośrednio przed i w chwili zatwierdzenia zamówienia i jego złożenia. Są to całkowite koszty, które Klient zobowiązany jest zapłacić wraz z należnymi podatkami. Ostateczna kwota do zapłaty wskazana jest także w wiadomości potwierdzającej otrzymanie zamówienia.
+<br>
+<br>III. Komunikacja
+<br>1. Klient może kontaktować się ze Sprzedawcą w następujący sposób: 
+<br>1)	przesyłając korespondencję na adres: ul. Nad Białą 5, 43-300 Bielsko-Biała,
+<br>2)	za pośrednictwem poczty elektronicznej pod adresem: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1f6c74737a6f5f2872706d7a28317c7072">[email&#160;protected]</a>,
+<br>3)	telefonicznie pod numerem telefonu do Biura Obsługi Klienta: +48 33 444 65 41 (opłata za połączenie zgodna z cennikiem operatora),
+<br>4)	poprzez formularz kontaktowy na stronie internetowej Sklepu, wskazując wymagane dane umożliwiające Sprzedawcy udzielenie odpowiedzi na skierowane do niego zapytania oraz zaznaczając wymagane pola.
+<br>2. Sprzedawca może skontaktować się z Klientem/Użytkownikiem w sprawie realizacji świadczonych usług, w szczególności złożonego zamówienia za pomocą poczty elektronicznej lub telefonicznie.
+<br>3. W przypadku niemożliwości zrealizowania zamówienia w sytuacjach wyjątkowych (np. zakończenie produkcji) lub z przyczyn nieleżących po stronie Sprzedającego, Klient zostanie o tym poinformowany telefonicznie lub mailowo. W takiej sytuacji od decyzji Klienta uzależnione będą dalsze działania związane z realizacją zamówienia (tj. wydłużenie czasu oczekiwania, częściowa lub całkowita rezygnacja z realizacji zamówienia). W przypadku rezygnacji z zamówienia, Sprzedający zwróci Klientowi środki pieniężne uiszczone tytułem zapłaty na rachunek bankowy, z którego nastąpiła zapłata. W przypadku braku możliwości nawiązania kontaktu z Klientem z przyczyn nieleżących po stronie Sprzedającego, Sprzedający może anulować zamówienie w całości i zwrócić Klientowi środki pieniężne uiszczone tytułem zapłaty na rachunek bankowy, z którego nastąpiła zapłata. 
+<br>
+<br>IV. Składanie zamówień
+<br>1. Zamówienia składane są wyłącznie za pośrednictwem strony internetowej www.Wicker-Maker.com.
+<br>2. Kupującym może być wyłącznie osoba fizyczna, która ukończyła 18 lat, a także osoba prawna lub jednostka organizacyjna nieposiadająca osobowości prawnej, której przepisy prawa przyznają zdolność prawną. Osoby w wieku pomiędzy 13 a 18 rokiem życia mogą dokonywać zakupów wyłącznie pod nadzorem przedstawiciela ustawowego lub opiekuna prawnego. Sklep nie ponosi żadnej odpowiedzialności za działania podejmowane przez osób niepełnoletnie. Odpowiedzialność prawna za takie działania spoczywa wyłącznie na ich opiekunach prawnych.
+<br>3. Złożenie zamówienia przez Klienta jest równoznaczne ze złożeniem oferty zawarcia umowy sprzedaży zamówionych Towarów. 
+<br>4. W celu prawidłowego złożenia zamówienia należy:
+<br>- dokonać wyboru Towaru, wskazać rozmiar (o ile taka możliwość jest dostępna) oraz liczbę sztuk, a następnie kliknąć „Dodaj do koszyka”, 
+<br>- przejść do widoku „Koszyk”, w którym można dokonać zmiany liczby sztuk, a następnie kliknąć „Dalej” (I etap),
+<br>- przejście do widoku „Logowanie do konta”, jeśli Użytkownik nie ma Konta Użytkownika lub nie chce się do niego logować może wybrać „Kupuję bez logowania”, a następnie kliknąć „Dalej” (II etap), albo zalogować się podając login i hasło,
+<br>- przejść do widoku „Dostawa i płatność”, w którym należy wskazać dane wymagane do zrealizowania dostawy, a także wybrać sposób płatności, 
+<br>- zapoznać się z Regulaminem Sklepu,
+<br>- zaznaczyć check-box, potwierdzający zapoznanie się z Regulaminem Sklepu i akceptację jego treści, 
+<br>- kliknąć przycisk „Złóż zamówienie z obowiązkiem zapłaty”, potwierdzające wolę złożenia zamówienia z obowiązkiem zapłaty (III etap),
+<br>- przejść do widoku podsumowania oraz – w przypadku wyboru płatności online -  dokonać płatności (IV etap). 
+<br>5. Na każdym etapie składania zamówienia, do czasu dokonania płatności, możliwe jest anulowanie zamówienia poprzez zaprzestanie przechodzenia do jego kolejnych etapów. Anulowanie zamówienia jest możliwe także po jego opłaceniu, ale przed przekazaniem przesyłki podmiotowi świadczącemu usługi pocztowe, przewozowe lub kurierskie. Zamówienie, którego proces składania nie został doprowadzony przez Użytkownika do końca nie zostanie zrealizowane. 
+<br>6. Zamówienia skutecznie opłacone oraz zamówienia z wybraną opcją płatności za pobraniem  są realizowane w kolejności ich składania.
+<br>7. Po złożeniu zamówienia Klient otrzymuje na podany przez siebie adres email wiadomość potwierdzającą zamówienie i zawarcie umowy sprzedaży Towarów. 
+<br>8. Na podany przez Klienta adres email lub telefon Sklep może kontaktować się z Klientem, w celu wyjaśnienia wątpliwości lub w innych kwestiach związanych z realizacją zamówienia. 
+<br>
+<br>V. Formy płatności oraz realizacja zamówień
+<br>1. Klient może skorzystać z następujących form płatności: 
+<br>1)	za pobraniem przy odbiorze Towarów - zapłata następuje gotówką przy odbiorze towaru (dotyczy jedynie doręczenia Towarów na terytorium Rzeczpospolitej Polskiej), 
+<br>2)	za pośrednictwem serwisów płatności online – zapłata następuje za pośrednictwem  Paypal, Blue Media S.A. oraz Rootpay Sp. z o.o. (przedpłata).
+<br>2. W przypadku wyboru formy płatności za pobraniem warunkiem wydania towaru jest zapłata ceny Towaru wraz z kosztami dostawy. 
+<br>3. W przypadku wyboru płatności za pośrednictwem serwisów płatności online i nieopłaceniu zamówienia w terminie 2 dni od jego złożenia, Sklep ma prawo odstąpić od umowy po wcześniejszym przesłaniu Klientowi informacji o jego nieopłaceniu oraz wyznaczeniu dodatkowego 24 godzinnego terminu na dokonanie zapłaty, pod rygorem anulowania zamówienia (odstąpienie przez Sklep od umowy). 
+<br>4. Realizacja zamówienia w przypadku zamówień za pobraniem następuje niezwłocznie po wysłaniu drogą elektroniczną wiadomości potwierdzającej zamówienie, natomiast w przypadku zamówień za pośrednictwem serwisów płatności online – niezwłocznie po zaksięgowaniu na rachunku bankowym Sprzedawcy całej ceny Towarów wraz z kosztami dostawy.
+<br>5. Czas realizacji zamówienia wynosi od 2 do 14 dni roboczych. Do czasu realizacji zamówienia nie wlicza się czasu dostarczenia Towaru, obejmującego okres od momentu przekazania przez Sprzedawcę przesyłki podmiotowi świadczącemu usługi pocztowe, przewozowe lub kurierskie do momentu doręczenie przesyłki przez ten podmiot Klientowi.
+<br>6. Klient otrzymuje fakturę VAT w formie elektronicznej na podany przez siebie adres email niezwłocznie po zaksięgowaniu na rachunku bankowym Sprzedawcy całej ceny Towarów wraz z kosztami dostawy. W przypadku zamówienia za pobraniem, Klient otrzymuje fakturę VAT po zakończeniu realizacji zamówienia (tj. po przygotowaniu zamówienia do wysyłki).
+<br>7. Dostawa zamówionych Towarów odbywa się za na terytorium Rzeczypospolitej Polskiej lub na terytorium innych niż Rzeczypospolita Polska państw za pośrednictwem podmiotów świadczących usługi pocztowe, przewozowe lub kurierskie. Towary wysyłane są wyłącznie pod adres podany przez Klienta jako „Adres dostawy”. 
+<br>8. Sklep nie odpowiada za niedostarczenie lub opóźnienie w dostawie Towarów związane z błędnym lub niedokładnym wskazaniem adresu.
+<br>9. Klient akceptując niniejszy Regulamin udziela Sprzedawcy akceptacji – w rozumieniu art. 106n ust. 1 ustawy z dnia 11 marca 2004 r. o podatku od towarów i usług (VAT) – na stosowanie przez Sprzedawcę w stosunku do Klienta faktur elektronicznych, w tym na przesyłanie (udostępnianie) faktur elektronicznych wystawionych przez Sprzedawcę w formacie pliku PDF za pomocą poczty elektronicznej na podany przez niego adres e-mail. Klient może w każdym czasie cofnąć akceptację, informując o tym Sprzedawcę.
+<br>
+<br>VI. Usługi dla Użytkowników 
+<br>1. Sklep udostępnia Użytkownikom funkcjonalność polegającą na powiadamianiu o dostępności danego Towaru w Sklepie w przypadku jego czasowego braku w magazynie (Powiadomienie o dostępności). 
+<br>2. W celu skorzystania ze wskazanej powyżej funkcjonalności Użytkownik powinien wybrać Towar niedostępny w magazynie a następnie:
+<br>a)	kliknąć „Powiadom o dostępności”,
+<br>b)	wpisać adres email w polu formularza,
+<br>c)	zaznaczyć check-box oznaczający potwierdzenie zapoznania się z Regulaminem Sklepu i akceptację jego treści,
+<br>d)	kliknąć w przycisk: „Powiadom o dostępności”.
+<br>3. Sprzedawca udostępnia Użytkownikowi usługę umożliwiającą założenie na stronie internetowej Sklepu Konta Użytkownika, w ramach którego Użytkownik może korzystać z dodatkowych funkcjonalności Sklepu po jednorazowym zarejestrowaniu i każdorazowym zalogowaniu się (Konto Użytkownika). 
+<br>4. Utworzenie Konta Użytkownika jest dobrowolne. Konto Użytkownika umożliwia dostęp do historii składanych zamówień oraz  wygodniejsze składanie zamówień.
+<br>5. W celu założenia Konta Użytkownika na stronie internetowej Sklepu Użytkownik powinien:
+<br>a)	kliknąć przycisk „Logowanie” znajdujący się w prawym górnym rogu,
+<br>b)	kliknąć przycisk „Utwórz konto”, który przenosi do widoku zakładania konta,
+<br>c)	wpisać wymagane dane w określonych polach formularza rejestracyjnego, tj. imię, nazwisko, telefon, adres email,
+<br>d)	zapoznać się z Regulaminem Sklepu,
+<br>e)	zaznaczyć check-box, potwierdzający zapoznanie się z Regulaminem Sklepu i akceptację jego treści, 
+<br>f)	kliknąć przycisk „Utwórz konto”.
+<br>6. Użytkownik może również założyć Konto Użytkownika w trakcie dokonywania zakupów bez rejestracji poprzez skorzystanie z opcji „Utwórz konto”, dostępnej w drugim etapie składania zamówienia.
+<br>7. Po dokonaniu przez Użytkownika rejestracji, Użytkownik otrzyma na podany adres email wiadomość mailową wraz z linkiem aktywacyjnym potwierdzającą adres email oraz zarejestrowanie Konta Użytkownika. Z chwilą jej otrzymania zostaje zawarta umowa o świadczenie nieodpłatnej usługi Konta Użytkownika na czas nieoznaczony.
+<br>8. Użytkownik jest uprawniony do wypowiedzenia umowy o świadczenie usługi Konta Użytkownika w dowolnym czasie, bez okresu wypowiedzenia, bez podania przyczyny i bez ponoszenia jakichkolwiek kosztów, w szczególności przez przesłanie Sprzedawcy za pośrednictwem poczty elektronicznej na adres: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="60130b0c051020570d0f1205574e030f0d">[email&#160;protected]</a> żądania usunięcia Konta Użytkownika ze wskazaniem adresu poczty elektronicznej (adresu e-mail) zarejestrowanego w Sklepie. Wygaśnięcia umowy o świadczenie usługi Konta skutkuje jego zablokowaniem i likwidacją.
+<br>9. Sprzedawca udostępnia Użytkownikom usługę polegającą na wysyłaniu przed Sprzedawcę za pośrednictwem poczty elektronicznej, na podany przez Użytkownika adres e-mail informacji w formie wiadomości e-mail (Newsletter). Usługa Newsletter świadczona jest nieodpłatnie przez czas nieoznaczony.
+<br>10. Newsletter zawiera informacje o ofercie produktów marki Wicker-Maker, nowych kolekcjach, aktualnych promocjach oraz inne wiadomości dotyczące marki Wicker-Maker oraz oferowanych przez nią produktów.
+<br>11. Każdy Newsletter zawiera informację o nadawcy Newslettera, wypełnione pole „Temat” określające treść Newslettera oraz informację o sposobie rezygnacji z usługi Newsletter lub zmianie adresu adresu e-mail Użytkownika, na który wysyłany jest Newsletter.
+<br>12. Korzystanie z usługi Newsletter jest uzależnione od posiadania przez Użytkownika komputera lub innego urządzenia multimedialnego z dostępem do sieci Internet oraz od posiadania przez Użytkownika aktywnego konta poczty elektronicznej (e-mail).
+<br>13. W celu zamówienia usługi Newsletter Użytkownik na stronie internetowej Sklepu powinien: 
+<br>a)	podać adres poczty elektronicznej Użytkownika w formularzu zamieszczonym na stronie internetowej,
+<br>b)	kliknąć przycisk „Zapisz się”,
+<br>c)	wyrazić zgodę na otrzymywanie wiadomości typu Newsletter i zaznaczyć check-box’a  potwierdzającego zapoznania się z Regulaminem Sklepu i akceptację jego treści,
+<br>d)	kliknąć przycisk „Zapisz się”,
+<br>e)	zaakceptować link potwierdzający rejestrację zamieszczony w przesłanej wiadomości elektronicznej o tytule „Potwierdzenie subskrypcji Newslettera”.
+<br>14. „Potwierdzenie subskrypcji Newslettera” w przesłanej wiadomości elektronicznej powoduje dodanie adresu poczty elektronicznej Użytkownika (adresu e-mail) do listy e-mailingowej, na który wysyłany będzie Newsletter.
+<br>15. Użytkownik może w każdej chwili, bez podania przyczyny i bez ponoszenia kosztów zrezygnować z usługi Newsletter w szczególności poprzez kliknięcie na link „Anulowanie subskrypcji Newslettera” umieszczony w stopce każdego Newslettera i odznaczenie zgody na przesyłanie Newslettera, a następnie naciśnięcie (kliknięcie) na przycisk „Zapisz zmiany” lub poprzez przesłanie za pośrednictwem poczty elektronicznej (adres e-mail) oświadczenia woli o rezygnacji z usługi na adres <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f1829a9d9481b1c69c9e8394c6df929e9cdf">[email&#160;protected]</a>
+<br>
+<br>VII. Postępowanie reklamacyjne
+<br>1. Sprzedawca ponosi odpowiedzialność za niezgodność Towaru z umową na zasadach określonych w przepisach:
+<br>- ustawy z dnia 30 maja 2014 r. o prawach konsumenta - w przypadku gdy Klient jest Konsumentem, 
+<br>- ustawy z dnia 23 kwietnia 1964 r. - Kodeks cywilny - w przypadku gdy Klient nie jest Konsumentem, ani osobą fizyczną zawierającą umowę bezpośrednio związaną z jej działalnością gospodarczą, gdy z treści tej umowy wynika, że nie ma ona dla tej osoby charakteru zawodowego.
+<br>2. Klient ma prawo złożyć reklamację w dowolny sposób. 
+<br>3. W celu usprawnienia procesu reklamacyjnego Sklep rekomenduje przesłanie zgłoszenia reklamacyjnego w formie wiadomości elektronicznej na adres <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="17647c7b726757207a786572203974787a">[email&#160;protected]</a> zawierającego zdjęcia reklamowanego Towaru oraz następujące dane:
+<br>- imię, nazwisko, adres e-mail, telefon, adres (ulica, nr domu/nr mieszkania, miejscowość, poczta),
+<br>- nr zamówienia,
+<br>- wskazanie, jakiego towaru dotyczy reklamacja,
+<br>- wskazanie, z jakiego powodu jest on reklamowany.
+<br>4. Sklep rozpatruje każdą reklamację i ustosunkuje się do niej niezwłocznie, nie później niż w ciągu 14 (czternaście) dni kalendarzowych od daty jej złożenia, powiadamiając Klienta o sposobie jej rozpatrzenia, w tym o sposobie odbioru przez Sklep Towaru od Klienta. 
+<br>
+<br>VIII. Prawo odstąpienia od umowy
+<br>1. Konsument ma prawo odstąpić od umowy sprzedaży Towaru zakupionego w Sklepie w ciągu 14 (czternastu) dni bez podawania przyczyny i bez ponoszenia kosztów, za wyjątkiem kosztów określonych w pouczeniu o prawie odstąpienia od umowy - stanowiącym załącznik nr 1 do Regulaminu. Pouczenie o prawie odstąpienia od umowy zawiera w szczególności informacje o sposobie i terminie wykonania prawa odstąpienia od umowy oraz o kosztach zwrotu Towaru ponoszonych przez Konsumenta w przypadku odstąpienia od umowy.
+<br>2. Konsument może odstąpić od umowy, składając przedsiębiorcy oświadczenie o odstąpieniu od umowy we wskazanym powyżej terminie na adres Centrum Logistyczne - Wicker-Maker ul. Nad Białą 5, 43- 300 Bielsko-Biała. 
+<br>3. Konsument, który odstąpił od umowy ma obowiązek zwrócić produkt niezwłocznie na adres Centrum Logistyczne - Wicker-Maker ul. Nad Białą 5, 43- 300 Bielsko-Biała, jednak nie później niż 14 dni od dnia, w którym odstąpił od umowy. 
+<br>4. W celu usprawnienia procesu odstąpienia od umowy Sklep rekomenduje złożenie oświadczenia o odstąpieniu od umowy na wzorze formularza odstąpienia od umowy, który stanowi załącznik nr 2 do Regulaminu wraz z jednoczesnym zwrotem Towaru na adres: Centrum Logistyczne - Wicker-Maker ul. Nad Białą 5, 43-300 Bielsko-Biała. 
+<br>5. Konsument ponosi odpowiedzialność za zmniejszenie wartości produktu będące wynikiem korzystania z niego w sposób wykraczający poza konieczny do stwierdzenia charakteru, cech i funkcjonowania Towaru. 
+<br>
+<br>IX. Dane osobowe
+<br>Szczegółowe zasady dotyczące przetwarzania i ochrony danych osobowych, a także plików cookies reguluje Polityka prywatności.
+<br>
+<br>X. Ochrona własności intelektualnej
+<br>Wszelkie prezentowane w Sklepie przejawy działalności twórczej o indywidualnym charakterze stanowią utwory w rozumieniu ustawy z dnia 4 lutego 1994 
+<br>o prawie autorskim i prawach pokrewnych i podlegają ochronie prawnej. Wykorzystywanie ich bez zgody Sprzedawcy dla jakichkolwiek celów, odpłatnych czy też nie, stanowi naruszeniem prawa autorskiego. 
+<br> 
+<br>XI. Pozasądowe sposoby rozpatrywania reklamacji i dochodzenia roszczeń
+<br>1. Konsument ma możliwość skorzystania z pozasądowego sposobu rozpatrywania reklamacji i dochodzenia roszczeń przed Stałym Sądem Polubownym przy Śląskim Wojewódzkim Inspektorze Inspekcji Handlowej w Katowicach. Informacje o sposobie dostępu do ww. trybu i procedur rozstrzygania sporów znajdują się pod adresem: www.uokik.gov.pl oraz https://katowice.wiih.gov.pl/.
+<br>2. Zgodnie z rozporządzeniem Parlamentu Europejskiego i Rady (UE) nr 524/2013 z dnia 21 maja 2013 r. w sprawie internetowego systemu rozstrzygania sporów konsumenckich oraz zmiany rozporządzenia (WE) nr 2006/2004 i dyrektywy 2009/22/WE (rozporządzenie w sprawie ODR w sporach konsumenckich) niniejszym udostępniamy łącze elektroniczne do platformy ODR: https://ec.europa.eu/consumers/odr/. Platforma ODR daje możliwość jej wykorzystania w celu rozstrzygnięcia sporów a także stanowi źródło informacji na temat pozasądowego rozstrzygania sporów pomiędzy konsumentami a przedsiębiorcami wynikających z internetowych umów sprzedaży lub umów o świadczenie usług.
+<br>
+<br>XII. Postanowienia końcowe
+<br>1. Regulamin dostępny jest nieodpłatnie na stronie internetowej Sklepu w postaci umożliwiającej jego pozyskanie, odtwarzanie i utrwalanie za pomocą systemu teleinformatycznego Użytkownika.
+<br>2. Regulamin jest także przesyłany - w postaci umożliwiającej jego pozyskanie, odtwarzanie 
+<br>i utrwalanie przez Użytkownika - na adres poczty elektronicznej podany przez Użytkownika w przypadku zawarcia ze Sprzedawcą umowy o świadczenie usług drogą elektroniczną lub umowy sprzedaży Towarów za pośrednictwem Sklepu.
+<br>3. Postanowienia Regulaminu nie mają na celu ograniczyć lub wyłączyć jakichkolwiek praw Użytkowników wynikających w szczególności z przepisów ustawy z dnia 23 kwietnia 1964 r. Kodeks cywilny oraz ustawy z dnia 30 kwietnia 2014 r. o prawach konsumenta.
+<br>4. Sprzedawca zastrzega sobie prawo do dokonywania zmian Regulaminu z ważnych przyczyn technicznych, prawnych lub/i organizacyjnych. Każdy Użytkownik zostanie poinformowany o zmianie Regulaminu poprzez opublikowanie go na stronie www.Wicker-Maker.com Zamówienia złożone przez Klientów przed wejściem w życie zmian regulaminu są realizowane według dotychczasowych postanowień regulaminu. 
+<br>5. Sprzedawca stosuje środki techniczne i organizacyjne odpowiednie do stopnia zagrożenia, w tym środki służące zapobieganiu pozyskania i modyfikacji przez osoby nieuprawnione danych osobowych przesyłanych przez Internet – w celu zapewnienia bezpieczeństwa komunikatów i danych przekazywanych w Sklepie. Sprzedawca zapewnia bezpieczeństwo transmisji danych przekazywanych w Sklepie poprzez stosowanie protokołu SSL (SecureSocketLayer).
+<br>6. Regulamin obowiązuje od dnia 1.05.2023 roku.
+<br>
+<br>Załącznik nr 1 - <a href=/pdf/zalacznik-1.pdf >Pouczenie o prawie odstąpienia od umowy.</a>
+<br>Załącznik nr 2 - <a href=/pdf/odstapienie.pdf >Wzór formularza odstąpienia od umowy.</a></p></div>
+<footer class="LS_footer">
+    <div class="MDFSS_Container">
+        <div class="MDFSS_Row">
+          <div class="MDFSS_Row MDFSS_Col-100-XS MDFSS_Col-100-S MDFSS_Col-25-M MDFSS_Col-25-L MDFSS_Col-25-XL LS_footerColumn" style="justify-content: center;align-content: center !important;">
+              <img src="/cdn-cgi/logo_white.png" class="d-md-none d-block" alt="" style="max-width:50%;max-height:100%;width:100%;margin-bottom: 3vw;" id="footerLogo">
+              <img src="/cdn-cgi/77_white.png" class="d-none d-md-block" alt="" style="max-width:50%;max-height:100%;width:100%;" id="footerLogo">
+          </div>
+            <div class="MDFSS_Col-100-XS MDFSS_Col-33-S MDFSS_Col-25-M MDFSS_Col-25-L MDFSS_Col-25-XL LS_footerColumn">
+                <input type="checkbox" id="LS_footerColumn_1" hidden="">
+                <label for="LS_footerColumn_1" class="LS_footerTitle" data-icon="">Menu</label>
+                <a href="strona_glowna.html" class="LS_footerTitle">Strona główna</a>
+                <a href="obserwacje.html" class="LS_footerTitle">Obserwowane</a>
+                <a href="sklep.html" class="LS_footerTitle">Sklep</a>
+                <a href="Koszyk.html" class="LS_footerTitle">Koszyk</a>
+            </div>
+            <div class="MDFSS_Col-100-XS MDFSS_Col-33-S MDFSS_Col-25-M MDFSS_Col-25-L MDFSS_Col-25-XL LS_footerColumn">
+                <input type="checkbox" id="LS_footerColumn_2" hidden="">
+                <label for="LS_footerColumn_2" class="LS_footerTitle" data-icon="">INFORMACJE</label>
+                <a href="zwroty.html" class="LS_footerTitle">Zwroty</a>
+                <a href="Reklamacje.html" class="LS_footerTitle">Reklamacje</a>	
+                <a href="Platnosci.html" class="LS_footerTitle">Płatność i koszty dostawy</a>
+                
+                <a href="Regulamin.html" class="LS_footerTitle">Regulamin</a>
+                <a href="Polityka.html" class="LS_footerTitle">Polityka prywatności</a>
+            </div>
+            <div class="MDFSS_Col-100-XS MDFSS_Col-33-S MDFSS_Col-25-M MDFSS_Col-25-L MDFSS_Col-25-XL LS_footerColumn">
+                <input type="checkbox" id="LS_footerColumn_3" hidden="">
+                <label for="LS_footerColumn_3" class="LS_footerTitle" data-icon="">POMOC</label>
+                <a href="Kontakt.html" class="LS_footerTitle">Kontakt</a>
+                <a href="Logowanie.html" class="LS_footerTitle">Logowanie</a>
+            </div>
+            
+    </div>
+</footer>
+</section> 
+
+<style>
+.LS_footer label{
+	pointer-events: none;
+}
+@media all and (max-width:575.99px){
+	.LS_footer .MDFSS_Container{
+		width: 100%;
+	}
+	.LS_footer input[type="checkbox"]:not(:checked) ~ a{
+		visibility: hidden;
+		height: 0;
+		opacity:0 !important;
+		padding:unset !important;
+	}
+	.LS_footer label{
+		width: 100%;
+		margin-bottom: 0 !important;
+		cursor:pointer;
+		pointer-events: auto;
+		font-size: var(--LS-size7) !important;
+		padding:0 2vw;
+		display: flex;
+	}
+	.LS_footer input[type="checkbox"]:checked + label[data-icon]:before, .LS_footer input[type="checkbox"]:checked + label:after{
+		color:var(--LS-main);
+	}
+	.LS_footer label[data-icon]:before{
+		content: attr(data-icon);
+		font-family: "Font Awesome 5 Free";
+		font-weight: bold;
+		margin-right:1vw;
+	}
+	.LS_footer label:after{
+		content: '\f078';
+		font-family: "Font Awesome 5 Free";
+		font-weight: bold;
+		position: relative;
+		margin-left: auto;
+		vertical-align: middle;
+		transform-origin: center;
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-ms-transition: all 0.3s;
+		-o-transition: all 0.3s;
+	}
+	.LS_footer input[type="checkbox"]:checked + label:after{
+	  transform: rotate(180deg);
+	}
+	.LS_footer .LS_footerColumn:nth-of-type(n+3) label{
+		border-top:solid 1px var(--LS-color7);
+	}
+	.LS_footer a.LS_footerTitle {
+		font-size: var(--LS-size6) !important;
+		width: 100%;
+		padding:.8vw 2vw;
+		opacity:1;
+		transition: opacity .3s ease-in-out;
+	}
+	.LS_footer a.LS_footerTitle:after {
+		border-bottom: none;
+	}
+}
+</style>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6YK5P6R3L6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6YK5P6R3L6');
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11123493486"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11123493486');
+</script>
+
+	
+<script>
+	const closePopup = (element) =>{
+		element.removeAttribute('show');
+		element.removeEventListener("click", listenerClosePopup); 
+		$('body').css('overflow','auto');
+	}
+	const openPopup = (element) =>{
+		const target = document.querySelector('.LS_modalContainer#'+element);
+		target.setAttribute('show','');
+		$('body').css('overflow','hidden');
+		target.addEventListener("click", listenerClosePopup = (e) => {
+			if (e.target.classList.contains("LS_modalContainer")){
+				closePopup(e.target);
+			}
+		}, false); 
+	}
+	var loader = function() {
+		document.querySelectorAll('.LS_entryScreen').forEach(function(value, i) {
+			value.removeAttribute('active');
+			setTimeout(function(){value.remove()}, 400, value);
+		});
+	};
+	var globalTimeout = null;
+	function lookup(element,type) {
+		globalTimeout = null;
+		var temp = element.parentNode.lastElementChild;
+		if(element.value.length == 0) {
+		} else {
+			var dataString = 'value='+element.value+'&type='+type;
+			$.ajax
+			({
+				type: "POST",
+				url: '/php/ajax/ajax_search_name.php',
+				data: dataString,
+				cache: false,
+				dataType : 'json', 
+				success : function(result) {
+					if (element.matches(':focus')){
+						temp.setAttribute('active','');
+					}
+					if (type == 0){
+						element.nextElementSibling.querySelectorAll('a').forEach(function(value) {
+							var tooltip = bootstrap.Tooltip.getInstance(value);
+							if (tooltip){
+								tooltip.dispose();
+							}
+						});
+					}
+					temp.innerHTML = result.items;
+				},
+				complete(xhr, textStatus) {
+					return;
+				}                   
+			});
+		}
+	}
+	function acceptAllbox(element){
+		var status = element.checked;
+		document.querySelectorAll('.LS_acceptCheckbox').forEach(function(value, i) {
+			value.checked = status;
+		});
+	}
+	if (document.querySelector('.productSearch input')){
+		document.querySelector('.productSearch input').addEventListener('keyup', (event) => {
+			if(globalTimeout) {clearTimeout(globalTimeout)};
+			globalTimeout = setTimeout(lookup,(event.keyCode == 32 ? 0 : 1000),event.target,1);
+		});
+	}
+	if (document.querySelector('.productSearchMenu input')){
+		document.querySelector('.productSearchMenu input').addEventListener('keyup', (event) => {
+			if(globalTimeout) {clearTimeout(globalTimeout)};
+			globalTimeout = setTimeout(lookup,(event.keyCode == 32 ? 0 : 1000),event.target,0);
+		});
+		var searchStatus = false;
+		document.querySelector('.productSearchMenu .LS_search').addEventListener('mouseover', (event) => {
+			searchStatus = document.querySelector('#searchNameMenu') === document.activeElement ? true : false;
+		});
+		function setFocusInput(element){
+			var input = element.nextElementSibling.querySelector('input');
+			if (searchStatus){
+				input.blur();
+				searchStatus = false;
+			} else {
+				input.focus();
+				searchStatus = true;
+			}
+		}
+	}
+	var mobileWidth = 575;
+	$(document).ready(function(){
+	var quantitiy=0;
+	$('.quantity-right-plus').click(function(e){
+			
+			// Stop acting like a button
+			e.preventDefault();
+			// Get the field name
+			var quantity = parseInt($('#quantity').val());            
+				$('#quantity').val(quantity + 1).change(); 
+		});
+	
+		$('.quantity-left-minus').click(function(e){
+			// Stop acting like a button
+			e.preventDefault();
+			// Get the field name
+			var quantity = parseInt($('#quantity').val());
+	
+				// Increment
+				if(quantity>1){
+				$('#quantity').val(quantity - 1).change();
+				}
+		});
+		loader();
+	});
+	AOS.init();
+	let titleLoop;
+	const origTitle = document.title;
+	const newTitle = (x) => {
+		if (x){
+			titleLoop = setInterval(() => {document.title = document.title == origTitle ? '* Wróć na '+origTitle : origTitle}, 3000);
+		} else {
+			document.title = origTitle;
+			clearInterval(titleLoop);
+		}
+	}
+	window.onblur = () => newTitle(true);
+	window.onfocus = () => newTitle(false);
+</script>
+	
+  </body>
+</html>
